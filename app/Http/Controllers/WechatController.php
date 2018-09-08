@@ -7,9 +7,30 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Log;
+use EasyWeChat\Factory;
+$config = [
+    'app_id' => 'wxcdbf45f934f6fc22',
+    'secret' => 'f3b667a994f344c78050518f009ccf86',
+    'token' => 'wechat',
+    'response_type' => 'array',
+
+    'log' => [
+        'level' => 'debug',
+        'file' => __DIR__.'/wechat.log',
+    ],
+];
+
+$app = Factory::officialAccount($config);
+
+$response = $app->server->serve();
+
+// 将响应输出
+$response->send(); // Laravel 里请使用：return $response;
+
+
 class WechatController extends Controller
 {
-    /** 
+    /**
      * 处理微信的请求消息
      *
      * @return string
