@@ -16,10 +16,6 @@ class WechatController extends Controller
      */
     public function serve()
     {
-        //以下是测试
-        echo 'success';
-        die;
-
         //以下是正文
         Log::info('request arrived.');
         $app = app('wechat');
