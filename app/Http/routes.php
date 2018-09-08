@@ -11,7 +11,9 @@
 |
 */
 
-Route::get('/','WechatController@serve');
+Route::any('/','WechatController@serve');
+Route::any('/loginConfirm','IndexController@loginConfirm');
+
 
 Route::group(['middleware' => ['wechat.oauth']], function () {
 	

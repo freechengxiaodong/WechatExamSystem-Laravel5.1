@@ -61,7 +61,7 @@ class WechatController extends Controller
         $buttons = [
             [
                 "type"=>"view",
-                "name"=>"进入课堂",
+                "name"=>"测试菜单",
                 "url"=>BASE_URL."###"
             ],
         ];
@@ -75,28 +75,33 @@ class WechatController extends Controller
         var_dump($menus);
     }
     //发送模板消息
-    public function sendMsg(){
-        $app = app('wechat');
-        $notice = $app->notice;
-        $template_id = 'XQ3uJilYd5elz-TUHzkvKF4-nfB6Yu3WBm0B45dRtbY';//消息模板的id
+    //调用方法    WeChat::sendAlertMsg("param1", "param2", "param3", "param4", "param5");
+    public static function sendAlertMsg($title, $service, $status, $message, $remark) {
+        $config = Config::get("wechat.official_account.default");
+        date_default_timezone_set('Asia/Shanghai');
+        $app = Factory::officialAccount($config); // 公众号
+        $templateId = "12335454";   //这里是模板ID，自行去公众号获取
+        $currentTime = date('Y-m-d H:i:s',time());
+        $host = "baidu123.com";   //你的域名
 
-        $url = BASE_URL.'/wx_student#/bulletininfo/'.$course_id.'/'.$bu_id;//点击模板消息的跳转的地址
-
-        //循环给多个用户发送消息
-        foreach ($users as $user){
-            if ($user['openid']!=""&&$user['openid']!='0'&&!empty($user['openid'])){
-                $open_id = $user['openid'];
-
-                //注：不同的模板，$data的内容可能不太一样，具体要看你微信公众号后台所使用的模板，上面都有示例的
-                $data = array(
-                "first"=>$user['name']."同学你好,你的".$course_nam.'课教师'.$create_name.'发布了一个新的班级公告',
-                "keyword1"=>'',
-                "keyword2"=>'',
-                "remark"=>'请及时查看班级公告',
-                );
-                $notice->uses($template_id)->withUrl($url)->andData($data)->andReceiver($open_id)->send();
-            }
+        $openids = ["1256456965252"];   //关注微信公众号的openid，前往公众号获取
+        foreach ($openids as $v) {
+            $result = $app->template_message->send([
+                'touser' => $v,
+                'template_id' => $templateId,
+                'url' => 'baidu.com',  //上边的域名
+                'data' => [
+                    'first' => $title,
+                    'keyword1' => $currentTime,
+                    'keyword2' => $host,
+                    'keyword3' => $service,
+                    'keyword4' => $status,
+                    'keyword5' =>$message,
+                    'remark' => $remark,
+                ]
+            ]);
+            Log::info("template send result:", $result);
         }
-
+        return Config::get("error.0");
     }
 }
