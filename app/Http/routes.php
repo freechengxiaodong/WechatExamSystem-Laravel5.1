@@ -11,7 +11,7 @@
 |
 */
 
-Route::any('/','WechatController@serve');
+Route::any('wxIndex','WechatController@index');
 Route::any('/loginConfirm','IndexController@loginConfirm');
 
 
