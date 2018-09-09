@@ -28,7 +28,7 @@ class IndexController extends Controller
         dd($info);die;
         //获取openid等信息
         session(['openid'=>$info['openid']]);
-        echo "location.href='".'/loginConfirm'."';</script>";
+        echo "<script>location.href='".'/loginConfirm'."';</script>";
     }
     public function loginConfirm(){
         //扫码关注后来到这里,检测是否需要手动填入班级学号信息
@@ -44,7 +44,7 @@ class IndexController extends Controller
         if($usrinfo){
             //已注册过,直接考试
             //上一页$_SERVER["HTTP_REFERER"]
-            echo "location.href='".'/shijuan'."';</script>";
+            echo "<script>location.href='".'/shijuan'."';</script>";
         }else{
             //尚未注册,需要先注册信息
             return view('Index.resgister',[
@@ -59,7 +59,7 @@ class IndexController extends Controller
             'number' => $request->input('number'),
             ]);
         if ($res){
-            echo "location.href='".'/shijuan'."';</script>";
+            echo "<script>location.href='".'/shijuan'."';</script>";
         }else{
             echo "<script>alert('非法参数,请新填写信息!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
         }
