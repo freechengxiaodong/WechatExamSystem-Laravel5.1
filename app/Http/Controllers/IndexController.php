@@ -13,7 +13,10 @@ class IndexController extends Controller
 {
     public function loginConfirm(){
         //扫码关注后来到这里,检测是否需要手动填入班级学号信息
-        $openid = 'freecheng123';
+        $obj=new WeixinController;
+        $info = $obj->getUserInfo();
+        dd($info);
+        $openid = $info['openid'];
         $usr = new Student();
         $usrinfo = $usr->where('openid','=',"$openid")->first();
         if($usrinfo){
@@ -31,7 +34,6 @@ class IndexController extends Controller
         $res = DB::table('students')->insert([
             'openid' => 'john@example.com',
             'name' => $request->input('name'),
-            'class' => $request->input('class'),
             'number' => $request->input('number'),
             ]);
         if ($res){

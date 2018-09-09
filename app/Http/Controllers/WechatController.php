@@ -106,6 +106,7 @@ class WechatController extends Controller
     public function definedItem(){
         $obj=new WeixinController;
         $access_token = $obj->getWxAccessToken();
+        dd($access_token);die;
         $url = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=".$access_token;
         $postJson = '{ 
                 "button":[
@@ -117,7 +118,7 @@ class WechatController extends Controller
                            { 
                                 "name":"随堂测试",
                                 "type":"view",
-                                "url":"/loginConfirm"
+                                "url":"http://exam.delin0.cn/loginConfirm"
                             },
                             { 
                                 "name":"生成试卷",
