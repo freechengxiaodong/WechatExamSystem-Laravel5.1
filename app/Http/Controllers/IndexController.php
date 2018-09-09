@@ -14,12 +14,6 @@ use App\Http\Controllers\Controller;
 class IndexController extends Controller
 {
     //跳转模板
-    public function msg($title,$content){
-        return view('warning.msg',[
-            'title' => $title,
-            'content' => $content,
-        ]);
-    }
     //授权
     public function grant()
     {
@@ -127,7 +121,12 @@ class IndexController extends Controller
             'count' => $count,
         ]);
         if ($res){
-            $this->msg('success','试题已生成!');
+            $title = 'success';
+            $content = '试题已生成!';
+            return view('warning.msg',[
+                'title' => $title,
+                'content' => $content,
+            ]);
         }else{
             echo "<script>alert('数据写入失败!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
         }
