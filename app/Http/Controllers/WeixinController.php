@@ -42,7 +42,6 @@ class WeixinController extends Controller
 		if(strtotime($res->updated_at) > time()){
             $url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid='.$this->appid.'&secret='.$this->appsecret;
             $res1 = $this->http_curl($url,'get','json');
-            dd($res1);
             $access_token = $res1['access_token'];
             $content=$access_token;
             $updated_at=date("Y-m-d H:i:s",time()+7000);
