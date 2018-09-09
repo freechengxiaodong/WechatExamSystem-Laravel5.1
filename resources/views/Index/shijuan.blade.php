@@ -68,7 +68,7 @@
             margin-top: 40px;
         }
     </style>
-<h1>姓名:XXX&nbsp;&nbsp;学号:1615935015&nbsp;&nbsp;时间:10:0:0</h1>
+<h1>姓名:{{$user->name}}&nbsp;&nbsp;学号:{{$user->number}}&nbsp;&nbsp;时间:10:0:0</h1>
 <div class="quiz-container">
     <div id="quiz"></div>
 </div>

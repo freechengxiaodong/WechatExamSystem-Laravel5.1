@@ -21,7 +21,6 @@ class IndexController extends Controller
     public function loginConfirm(Request $request){
         //扫码关注后来到这里,检测是否需要手动填入班级学号信息
         $openid = $request->session()->get('openid');
-        echo $openid;die;
         $usr = new Student();
         $usrinfo = $usr->where('openid','=',"$openid")->first();
         if($usrinfo){
@@ -37,7 +36,7 @@ class IndexController extends Controller
     }
     public function studentInfoInsert(Request $request){
         $res = DB::table('students')->insert([
-            'openid' => 'john@example.com',
+            'openid' => $request->session()->get('openid'),
             'name' => $request->input('name'),
             'number' => $request->input('number'),
             ]);
@@ -48,14 +47,18 @@ class IndexController extends Controller
         }
 
     }
-    public function shijuan(){
+    public function shijuan(Request $request){
         //检测教师是否有推出试卷
 
 
         //有测试的话根据教师本次的选题进行试题生成
+        $openid = $request->session()->get('openid');
+        $usr = new Student();
+        $usrinfo = $usr->where('openid','=',"$openid")->first();
         $obj = DB::table('tests')->where('id', '>' ,'0')->get();
         return view('Index.shijuan',[
            'obj' => $obj,
+            'user' => $usrinfo,
         ]);
     }
     public function dafen(Request $request){
