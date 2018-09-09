@@ -68,7 +68,7 @@ class IndexController extends Controller
 
         $obj = DB::table('tests')
             ->where('chapter','=',"$zhangjie")
-            ->inRandomOrder()
+            ->orderBy(DB::raw('RAND()'))
             ->take("$count")
             ->get();
         return view('Index.shijuan',[
