@@ -26,7 +26,7 @@ class IndexController extends Controller
         $weixin=new WeixinController();
         $info=$weixin->getUserInfo();
         dd($info);die;
-        //session存储openid
+        //获取openid等信息
         session(['openid'=>$info['openid']]);
         echo "location.href='".'/loginConfirm'."';</script>";
     }
