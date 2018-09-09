@@ -69,20 +69,20 @@ class WechatController extends Controller
             if($postObj->Content==$content)
                 $arr=array(
                     array(
-                        'title'=>'song',
-                        'description'=>'百度 is goods!!!',
+                        'title'=>'123',
+                        'description'=>'百度',
                         'picUrl'=>'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=930273838,2930834021&fm=27&gp=0.jpg',
                         'url'=>'http://www.baidu.com',
                     ),
                     array(
-                        'title'=>'chuan',
-                        'description'=>'淘宝 is goods!!!',
+                        'title'=>'234',
+                        'description'=>'淘宝',
                         'picUrl'=>'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=930273838,2930834021&fm=27&gp=0.jpg',
                         'url'=>'http://www.hao123.com',
                     ),
                     array(
-                        'title'=>'wei',
-                        'description'=>'好123 is goods!!!',
+                        'title'=>'45436',
+                        'description'=>'好',
                         'picUrl'=>'https://www.baidu.com/img/bd_logo1.png',
                         'url'=>'http://www.qq.com',
                     ),
