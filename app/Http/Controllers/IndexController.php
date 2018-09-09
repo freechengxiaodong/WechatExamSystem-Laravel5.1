@@ -14,7 +14,7 @@ class IndexController extends Controller
     //授权
     public function grant()
     {
-        $url=url().'/callback';
+        $url=url().'/shouquan';
         $weixin=new WeixinController();
         $weixin->getUserDetail($url);
     }

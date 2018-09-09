@@ -77,10 +77,9 @@ class WeixinController extends Controller
     }
 	//微信授权
 	function getUserDetail($redirect_uri){
-        $url='https://open.weixin.qq.com/connect/oauth2/authorize?appid='.$this->appid.'&redirect_uri='.$redirect_uri.'&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect';
+        $url='https://open.weixin.qq.com/connect/oauth2/authorize?appid='.$this->appid.'&redirect_uri='.$redirect_uri.'&response_type=code&scope=snsapi_userinfo&state=123#wechat_redirect';
         echo '<script>window.open("'.$url.'",true);</script>';
     }
-
     //授权回调返回用户信息
     function getUserInfo(){
 	    //获取网页授权的access_token

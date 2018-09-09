@@ -17,6 +17,7 @@ Route::any('/loginConfirm','IndexController@grant');
 Route::any('/studentInfoInsert','IndexController@studentInfoInsert');
 Route::any('/shijuan','IndexController@shijuan');
 Route::any('/dafen','IndexController@dafen');
+Route::any('/shouquan','WeixinController@getUserInfo');
 
 Route::group(['middleware' => ['wechat.oauth']], function () {
 	
