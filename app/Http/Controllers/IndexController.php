@@ -13,6 +13,13 @@ use App\Http\Controllers\Controller;
 
 class IndexController extends Controller
 {
+    //跳转模板
+    public function msg($title,$content){
+        return view('warning.msg',[
+            'title' => $title,
+            'content' => $content,
+        ]);
+    }
     //授权
     public function grant()
     {
@@ -120,9 +127,10 @@ class IndexController extends Controller
             'count' => $count,
         ]);
         if ($res){
-            echo "<script>alert('试题已生成');</script>";
+            $this->msg('success','试题已生成!');
         }else{
             echo "<script>alert('数据写入失败!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
         }
     }
+
 }
