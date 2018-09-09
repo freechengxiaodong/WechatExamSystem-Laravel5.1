@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Log;
-use EasyWeChat\Factory;
+use EasyWeChat;
 
 class WechatController extends Controller
 {
