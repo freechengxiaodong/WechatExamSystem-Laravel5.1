@@ -19,13 +19,13 @@ class IndexController extends Controller
         $weixin->getUserDetail($url);
     }
 
-    //回调数据存数据库
+    //回调数据
     public function callback()
     {
         //接收授权的用户信息
         $weixin=new WeixinController();
         $info=$weixin->getUserInfo();
-
+        dd($info);
         //session存储openid
         session(['openid'=>$info['openid']]);
         echo "location.href='".'/loginConfirm'."';</script>";
