@@ -25,7 +25,6 @@
             margin-bottom: 10px;
         }
         .answers {
-            margin-left: -120px;
             margin-bottom: 18px;
             text-align: left;
             display: inline-block;
