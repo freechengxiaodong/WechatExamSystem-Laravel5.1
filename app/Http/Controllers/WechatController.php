@@ -16,6 +16,7 @@ class WechatController extends Controller
 
 
     public function index() {
+        echo 111;
         //1.将timestamp,nonce,token按字典序排列
         $timestamp= $_GET['timestamp'];
         $nonce = $_GET['nonce'];
