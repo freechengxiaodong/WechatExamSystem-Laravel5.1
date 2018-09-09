@@ -22,6 +22,7 @@ class IndexController extends Controller
     //回调数据
     public function callback()
     {
+        die;
         //接收授权的用户信息
         $weixin=new WeixinController();
         $info=$weixin->getUserInfo();
