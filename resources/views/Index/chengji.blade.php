@@ -21,7 +21,7 @@
             color: #fff;
         }
     </style>
-    <h1>姓名:{{$user->name}}&nbsp;&nbsp;学号:{{$user->number}}&nbsp;&nbsp;时间:10:0:0</h1>
+    <h1>姓名:{{$user->name}}&nbsp;&nbsp;学号:{{$user->number}}&nbsp;&nbsp;</h1>
 <div class="quiz-container">
     <div id="quiz"></div>
 </div>
