@@ -111,31 +111,16 @@ class WechatController extends Controller
                 "button":[
                             { 
                                 "type":"click",
-                                "name":"菜单二",
+                                "name":"待定",
                                 "key":"item1"
                            },
                            { 
-                               "name":"菜单二",
-                                    "sub_button":[
-                                    { 
-                                        "type":"view",
-                                        "name":"菜单二",
-                                        "url":"https://www.baidu.com"
-                                    },
-                                    { 
-                                        "type":"view",
-                                        "name":"菜单二",
-                                        "url":"https://www.baidu.com"
-                                    },
-                                    { 
-                                        "type":"view",
-                                        "name":"菜单二",
-                                        "url":"https://www.baidu.com"
-                                    }
-                                 ]
-                           },
+                                "name":"随堂测试",
+                                "type":"view",
+                                "url":"/loginConfirm"
+                            },
                             { 
-                                "name":"菜单二",
+                                "name":"生成试卷",
                                 "type":"view",
                                 "url":"https://www.baidu.com"
                             }
