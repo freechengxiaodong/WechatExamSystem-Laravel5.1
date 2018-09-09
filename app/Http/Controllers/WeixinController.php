@@ -38,6 +38,7 @@ class WeixinController extends Controller
 
 	//数据库获取全局access_token
 	public function getWxAccessToken(){
+        echo 222;die;
 		$res = DB::table('token')->whereId(1)->first();
 		if(strtotime($res->updated_at) > time()){
 			return $res->content;
