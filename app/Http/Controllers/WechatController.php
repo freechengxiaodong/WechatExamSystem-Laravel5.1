@@ -12,7 +12,8 @@ use Log;
 class WechatController extends Controller
 {
     public $url = 'http://exam.delin0.cn';
-
+    public $appid = 'wxcdbf45f934f6fc22';
+    public $appsecret = 'f3b667a994f344c78050518f009ccf86';
 
     public function index() {
         //1.将timestamp,nonce,token按字典序排列
@@ -101,6 +102,13 @@ class WechatController extends Controller
 
     //创建微信菜单
     public function definedItem(){
+        $url="https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=".$this->appid."&secret=".$this->appsecret;
+        $res=$this->http_curl($url,'get','json');
+        $access_token=$res['access_token'];
+        echo $access_token;
+        dd($res);
+
+        die;
         $obj=new WeixinController;
         $access_token = $obj->getWxAccessToken();
         $url = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=".$access_token;
@@ -112,29 +120,29 @@ class WechatController extends Controller
                                 "key":"item1"
                            },
                            { 
-                               "name":"纪念馆",
+                               "name":"菜单二",
                                     "sub_button":[
                                     { 
                                         "type":"view",
-                                        "name":"创建馆",
-                                        "url":"http://zj.delin0.cn/memory/create"
+                                        "name":"菜单二",
+                                        "url":"#"
                                     },
                                     { 
                                         "type":"view",
-                                        "name":"私人馆",
-                                        "url":"http://zj.delin0.cn/memory/personal"
+                                        "name":"菜单二",
+                                        "url":"#"
                                     },
                                     { 
                                         "type":"view",
-                                        "name":"公众纪念馆",
-                                        "url":"http://zj.delin0.cn/memory/common"
+                                        "name":"菜单二",
+                                        "url":"#"
                                     }
                                  ]
                            },
                             { 
-                                "name":"家族圈",
+                                "name":"菜单二",
                                 "type":"view",
-                                "url":"http://zj.delin0.cn/family/grant"
+                                "url":"#"
                             }
                         ]
                     }';
