@@ -16,6 +16,7 @@ class IndexController extends Controller
     {
         $url=url().'/callback';
         $weixin=new WeixinController();
+        echo $url;die;
         $weixin->getUserDetail($url);
     }
 
