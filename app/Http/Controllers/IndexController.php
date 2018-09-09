@@ -57,13 +57,20 @@ class IndexController extends Controller
     }
     public function shijuan(Request $request){
         //检测教师是否有推出试卷
-
-
+        $id = DB::table('shijuans')->max('id');
+        $res = DB::table('shijuans')->find($id);
+        $zhangjie = $res->zhangjie;
+        $count = $res->count;
         //有测试的话根据教师本次的选题进行试题生成
         $openid = $request->session()->get('openid');
         $usr = new Student();
         $usrinfo = $usr->where('openid','=',"$openid")->first();
-        $obj = DB::table('tests')->where('id', '>' ,'0')->get();
+
+        $obj = DB::table('tests')
+            ->where('chapter','=',"$zhangjie")
+            ->inRandomOrder()
+            ->take("$count")
+            ->get();
         return view('Index.shijuan',[
            'obj' => $obj,
             'user' => $usrinfo,
