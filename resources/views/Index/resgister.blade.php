@@ -11,13 +11,7 @@
         <div class="weui-cell">
             <div class="weui-cell__hd"><label class="weui-label" style="width: 60px">姓名</label></div>
             <div class="weui-cell__bd">
-                <input class="weui-input" type="number" name="name" pattern="[0-9]*" placeholder="请输入姓名">
-            </div>
-        </div>
-        <div class="weui-cell">
-            <div class="weui-cell__hd"><label class="weui-label" style="width: 60px">班级</label></div>
-            <div class="weui-cell__bd">
-                <input class="weui-input" type="number" name="class" pattern="[0-9]*" placeholder="请输班级">
+                <input class="weui-input" type="number" name="name" placeholder="请输入姓名">
             </div>
         </div>
         <div class="weui-cell">
