@@ -25,20 +25,14 @@ class IndexController extends Controller
         //接收授权的用户信息
         $weixin=new WeixinController();
         $info=$weixin->getUserInfo();
-        dd($info);die;
         //获取openid等信息
         session(['openid'=>$info['openid']]);
         echo "<script>location.href='".'/loginConfirm'."';</script>";
     }
-    public function loginConfirm(){
+    public function loginConfirm(Request $request){
         //扫码关注后来到这里,检测是否需要手动填入班级学号信息
-        $weixin=new WeixinController();
-        $info=$weixin->getUserInfo();
-        dd($info);die;
-        //session存储openid
-        session(['openid'=>$info['openid']]);
-
-        $openid = $info['openid'];
+        $openid = $request->session()->get('openid');
+        echo $openid;die;
         $usr = new Student();
         $usrinfo = $usr->where('openid','=',"$openid")->first();
         if($usrinfo){
