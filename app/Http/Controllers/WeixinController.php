@@ -82,6 +82,7 @@ class WeixinController extends Controller
     }
     //授权回调返回用户信息
     function getUserInfo(){
+        die;
 	    //获取网页授权的access_token
         $code=$_GET['code'];
         $url='https://api.weixin.qq.com/sns/oauth2/access_token?appid='.$this->appid.'&secret='.$this->appsecret.'&code='.$code.'&grant_type=authorization_code ';
