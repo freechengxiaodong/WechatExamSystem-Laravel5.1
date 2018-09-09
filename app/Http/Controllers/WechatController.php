@@ -8,25 +8,6 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Log;
 use EasyWeChat\Factory;
-$config = [
-    'app_id' => 'wxcdbf45f934f6fc22',
-    'secret' => 'f3b667a994f344c78050518f009ccf86',
-    'token' => 'wechat',
-    'response_type' => 'array',
-
-    'log' => [
-        'level' => 'debug',
-        'file' => __DIR__.'/wechat.log',
-    ],
-];
-
-$app = Factory::officialAccount($config);
-
-$response = $app->server->serve();
-
-// 将响应输出
-$response->send(); // Laravel 里请使用：return $response;
-
 
 class WechatController extends Controller
 {
@@ -37,6 +18,25 @@ class WechatController extends Controller
      */
     public function serve()
     {
+        //验证
+        $config = [
+            'app_id' => 'wxcdbf45f934f6fc22',
+            'secret' => 'f3b667a994f344c78050518f009ccf86',
+            'token' => 'wechat',
+            'response_type' => 'array',
+
+            'log' => [
+                'level' => 'debug',
+                'file' => __DIR__.'/wechat.log',
+            ],
+        ];
+
+        $app = Factory::officialAccount($config);
+
+        $response = $app->server->serve();
+
+// 将响应输出
+        $response->send(); // Laravel 里请使用：return $response;
         //以下是正文
         Log::info('request arrived.');
         $app = app('wechat');
