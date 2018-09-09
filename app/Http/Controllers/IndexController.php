@@ -16,7 +16,6 @@ class IndexController extends Controller
     {
         $url=url().'/callback';
         $weixin=new WeixinController();
-        echo $url;die;
         $weixin->getUserDetail($url);
     }
 
@@ -26,7 +25,7 @@ class IndexController extends Controller
         //接收授权的用户信息
         $weixin=new WeixinController();
         $info=$weixin->getUserInfo();
-        dd($info);
+        dd($info);die;
         //session存储openid
         session(['openid'=>$info['openid']]);
         echo "location.href='".'/loginConfirm'."';</script>";
