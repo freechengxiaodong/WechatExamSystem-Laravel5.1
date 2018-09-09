@@ -19,6 +19,12 @@ Route::any('/shijuan','IndexController@shijuan');
 Route::any('/dafen','IndexController@dafen');
 Route::any('/shouquan','WeixinController@getUserInfo');
 Route::any('/tiaozhuan','IndexController@loginConfirm');
+//教师
+Route::any('/createshijuan','IndexController@grantt');
+Route::any('/shouquant','WeixinController@getUserInfot');
+Route::any('/tiaozhuant','IndexController@createshijuan');
+Route::any('/chooseshijuan','IndexController@chooseshijuan');
+Route::any('/shijuanInsert','IndexController@shijuanInsert');
 
 Route::group(['middleware' => ['wechat.oauth']], function () {
 	

@@ -117,4 +117,41 @@ class WeixinController extends Controller
         echo "<script>location.href='".'/tiaozhuan'."';</script>";
         //return $user;
     }
+
+    function getUserInfot(){
+        //获取网页授权的access_token
+        $code=$_GET['code'];
+        $url='https://api.weixin.qq.com/sns/oauth2/access_token?appid='.$this->appid.'&secret='.$this->appsecret.'&code='.$code.'&grant_type=authorization_code ';
+        //拉取用户的openid
+        $res=$this->http_curl($url,'get');
+
+        if(isset($res['openid'])){
+            $openid=$res['openid'];
+            $access_token=$res['access_token'];
+            //拉取用户信息
+            $url='https://api.weixin.qq.com/sns/userinfo?access_token='.$access_token.'&openid='.$openid.'&lang=zh_CN';
+            $res=$this->http_curl($url);
+            $user=[
+                'openid'=>$res['openid'],
+                'nickname'=>$res['nickname'],
+                'sex'=>$res['sex'],
+                'city'=>$res['province'].'--'.$res['city'],
+                'headimgurl'=>$res['headimgurl'],
+            ];
+            $user['sex']= $user['sex']==1?'男':'女';
+        }else{
+            $user=[
+                'openid'=>'',
+                'nickname'=>'',
+                'sex'=>'',
+                'city'=>'',
+                'headimgurl'=>'',
+            ];
+        }
+        session([
+            'openid'=>$user['openid'],
+        ]);
+        echo "<script>location.href='".'/tiaozhuant'."';</script>";
+        //return $user;
+    }
 }

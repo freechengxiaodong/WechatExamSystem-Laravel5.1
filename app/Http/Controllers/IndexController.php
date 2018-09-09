@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Admin\TeachersController;
 use App\Student;
 use Illuminate\Http\Request;
 use DB;
@@ -13,6 +14,12 @@ class IndexController extends Controller
 {
     //授权
     public function grant()
+    {
+        $url=url().'/shouquan';
+        $weixin=new WeixinController();
+        $weixin->getUserDetail($url);
+    }
+    public function grantt()
     {
         $url=url().'/shouquan';
         $weixin=new WeixinController();
@@ -74,5 +81,32 @@ class IndexController extends Controller
             'score' => $score,
             'user' => $usrinfo,
         ]);
+    }
+    public function createshijuan(Request $request){
+        $openid = $request->session()->get('openid');
+        $usr = new Teacher();
+        $info = $usr->where('openid','=',"$openid")->first();
+        if($info){
+            echo "<script>location.href='".'/chooseshijuan'."';</script>";
+        }else{
+            echo "<script>alert('未检测到教师信息,请联系管理员添加!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
+        }
+    }
+    public function chooseshijuan(){
+        //$obj = DB::table('tests')->where('id', '>' ,'0')->get();
+        return view('Index.chooseshijuan');
+    }
+    public function shijuanInsert(Request $request){
+        $zhangjie = $request->input('zhangjie');
+        $count = $request->input('count');
+        $res = DB::table('shijuans')->insert([
+            'zhangjie' => $zhangjie,
+            'count' => $count,
+        ]);
+        if ($res){
+            echo "<script>alert('试题已生成');</script>";
+        }else{
+            echo "<script>alert('数据写入失败!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
+        }
     }
 }
