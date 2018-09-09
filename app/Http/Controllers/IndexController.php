@@ -80,9 +80,20 @@ class IndexController extends Controller
         $openid = $request->session()->get('openid');
         $usr = new Student();
         $usrinfo = $usr->where('openid','=',"$openid")->first();
+        $stuid = $usrinfo->id;
         $dui = $request->input('dui');
         $count = $request->input('count');
         $score = (integer)($dui/$count*100);
+
+        DB::table('counts')->insert([
+            'student_id' => $stuid,
+            'grade' => $score,
+            'content' => array([
+                'correct' => $dui,
+                'default' => $count-$dui,
+            ]),
+        ]);
+
         return view('Index.chengji',[
             'dui' => $dui,
             'count' => $count,
