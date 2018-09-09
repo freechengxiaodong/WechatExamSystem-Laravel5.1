@@ -14,7 +14,7 @@ class IndexController extends Controller
         //扫码关注后来到这里,检测是否需要手动填入班级学号信息
         $openid = 'freecheng123';
         $usr = new User();
-        $usrinfo = $usr->where('openid',eq,"$openid")->first();
+        $usrinfo = $usr->where('openid','=',"$openid")->first();
         if($usrinfo){
             //已注册过,直接考试
             //上一页$_SERVER["HTTP_REFERER"]
