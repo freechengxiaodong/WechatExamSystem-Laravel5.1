@@ -111,7 +111,10 @@ class WeixinController extends Controller
 	        		'headimgurl'=>'',
 	        	];
         }
-        die;
-        return $user;
+        session([
+            'openid'=>$user['openid'],
+        ]);
+        echo "<script>location.href='".'/tiaozhuan'."';</script>";
+        //return $user;
     }
 }
