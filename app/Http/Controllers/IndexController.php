@@ -84,13 +84,13 @@ class IndexController extends Controller
         $dui = $request->input('dui');
         $count = $request->input('count');
         $score = (integer)($dui/$count*100);
+        $cuo = $count-$dui;
 
         DB::table('counts')->insert([
             'student_id' => $stuid,
             'grade' => $score,
-            'content' => "对".$dui."道题,错"."$count-$dui"."道题",
+            'content' => "对".$dui."道题,错"."$cuo"."道题",
         ]);
-
         return view('Index.chengji',[
             'dui' => $dui,
             'count' => $count,
