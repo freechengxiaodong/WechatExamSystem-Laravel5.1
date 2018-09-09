@@ -103,7 +103,7 @@ class WechatController extends Controller
     //创建微信菜单
     public function definedItem(){
         //2.获取token地址，并替换$appid和$secret
-        $url="https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=".$appid."&secret=".$secret."";
+        $url="https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=".$this->appid."&secret=".$this->appsecret."";
         //3.调用wei_function.php文件内的getdata()函数
         $output=getdata($url);
         //4.json_decode解码JSON数据转变为数组，并通过
