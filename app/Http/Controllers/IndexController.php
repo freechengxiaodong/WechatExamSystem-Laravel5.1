@@ -27,6 +27,7 @@ class IndexController extends Controller
         $info=$weixin->getUserInfo();
         //获取openid等信息
         session(['openid'=>$info['openid']]);
+        echo $request->session()->get('openid');die;
         echo "<script>location.href='".'/loginConfirm'."';</script>";
     }
     public function loginConfirm(Request $request){
