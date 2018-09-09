@@ -21,7 +21,7 @@ class IndexController extends Controller
             echo "location.href='".'shijuan'."';</script>";
         }else{
             //尚未注册,需要先注册信息
-            view('Index.resgister',[
+            return view('Index.resgister',[
                 'openid' => $openid,
             ]);
         }
