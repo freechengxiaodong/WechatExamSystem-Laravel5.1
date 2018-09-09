@@ -8,10 +8,11 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\WeixinController;
 use Log;
-define("TOKEN", "weixin");
+
 class WechatController extends Controller
 {
     public function index(){
+        define("TOKEN", "weixin");
         $wechatObj = new wechatCallbackapiTest();
         $wechatObj->valid();
     }
