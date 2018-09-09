@@ -68,7 +68,27 @@
             margin-top: 40px;
         }
     </style>
-<h1>姓名:{{$user->name}}&nbsp;&nbsp;学号:{{$user->number}}&nbsp;&nbsp;时间:10:0:0</h1>
+
+
+
+    <SCRIPT type="text/javascript">
+        var maxtime = 60 * 60; //一个小时，按秒计算，自己调整!
+        function CountDown() {
+            if (maxtime >= 0) {
+                minutes = Math.floor(maxtime / 60);
+                seconds = Math.floor(maxtime % 60);
+                msg = "距离结束还有" + minutes + "分" + seconds + "秒";
+                document.all["timer"].innerHTML = msg;
+                if (maxtime == 5 * 60)alert("还剩5分钟");
+                --maxtime;
+            } else{
+                clearInterval(timer);
+                alert("时间到，结束!");
+            }
+        }
+        timer = setInterval("CountDown()", 1000);
+    </SCRIPT>
+<h1>姓名:{{$user->name}}&nbsp;&nbsp;学号:{{$user->number}}&nbsp;&nbsp;时间:<span id="timer" style="color:red"></span></h1>
 <div class="quiz-container">
     <div id="quiz"></div>
 </div>
