@@ -15,7 +15,7 @@ class WeixinController extends Controller
     public $appid = 'wxcdbf45f934f6fc22';
 	public $appsecret = 'f3b667a994f344c78050518f009ccf86';
 
-	public $url = 'http://203.195.158.249/exam/public/';
+	public $url = 'http://exam.delin0.cn';
 
 	//session获取access_token
     function WxAccessToken(){
