@@ -12,7 +12,6 @@ define("TOKEN", "weixin");
 class WechatController extends Controller
 {
     public function index(){
-        echo 222;die;
         $wechatObj = new wechatCallbackapiTest();
         $wechatObj->valid();
     }
