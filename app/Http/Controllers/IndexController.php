@@ -15,6 +15,7 @@ class IndexController extends Controller
 {
     //跳转模板
     public function msg($title,$content){
+        echo $title.$content;die;
         return view('warning.msg',[
             'title' => $title,
             'content' => $content,
