@@ -78,6 +78,7 @@ class WeixinController extends Controller
 	//微信授权
 	function getUserDetail($redirect_uri){
         $url='https://open.weixin.qq.com/connect/oauth2/authorize?appid='.$this->appid.'&redirect_uri='.$redirect_uri.'&response_type=code&scope=snsapi_userinfo&state=123#wechat_redirect ';
+        echo $url;die;
         echo '<script>window.open("'.$url.'",true);</script>';
     }
 
