@@ -12,7 +12,7 @@
         <div class="weui-cell weui-cell_select">
             <div class="weui-cell__bd">
                 <select class="weui-select" name="zhangjie">
-                    <option selected value="1">第一章</option>
+                    <option selected value="第一章">第一章</option>
                     <option value="第二章">第二章</option>
                     <option value="第三章">第三章</option>
                     <option value="第四章">第四章</option>
