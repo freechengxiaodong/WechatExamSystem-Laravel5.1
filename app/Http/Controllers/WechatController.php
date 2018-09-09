@@ -31,6 +31,8 @@ class WechatController extends Controller
         $str = sha1( implode( $array ) );
         if( $str  == $signature  ){
             //第一次接入weixin api接口的时候
+            $this->reponseMsg();
+            $this->definedItem();
             echo  $echostr;
             exit;
         }else{

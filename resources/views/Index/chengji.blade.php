@@ -28,7 +28,8 @@
     <div style="margin-top: 60px">
         <h2 style="font-size: 20px">你答对了{{$count}}道题中的{{$dui}}道</h2>
         <h2 style="font-size: 16px">本次测试的最终得分为:</h2>
-        <h2><span style="font-size: 60px"  class="timer count-title" id="count-number" data-to="{{$score}}" data-speed="1500">0</span><span style="font-size: 20px">分</span></h2>
+        <h2><span style="font-size: 60px;color: red"  class="timer count-title" id="count-number" data-to="{{$score}}" data-speed="1500">0</span>
+            <span style="font-size: 20px">分</span></h2>
     </div>
     <script src="/other/js/jquery.min.js"></script>
     <script type="text/javascript" src="/other/js/count.js"></script>
