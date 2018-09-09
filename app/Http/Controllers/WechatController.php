@@ -102,7 +102,6 @@ class WechatController extends Controller
 
         }
     }
-
     //创建微信菜单
     public function definedItem(){
         $obj=new WeixinController;
@@ -121,24 +120,24 @@ class WechatController extends Controller
                                     { 
                                         "type":"view",
                                         "name":"菜单二",
-                                        "url":"#"
+                                        "url":"https://www.baidu.com"
                                     },
                                     { 
                                         "type":"view",
                                         "name":"菜单二",
-                                        "url":"#"
+                                        "url":"https://www.baidu.com"
                                     },
                                     { 
                                         "type":"view",
                                         "name":"菜单二",
-                                        "url":"#"
+                                        "url":"https://www.baidu.com"
                                     }
                                  ]
                            },
                             { 
                                 "name":"菜单二",
                                 "type":"view",
-                                "url":"#"
+                                "url":"https://www.baidu.com"
                             }
                         ]
                     }';
