@@ -88,10 +88,10 @@ class IndexController extends Controller
         DB::table('counts')->insert([
             'student_id' => $stuid,
             'grade' => $score,
-            'content' => array([
+            'content' => array(
                 'correct' => $dui,
                 'default' => $count-$dui,
-            ]),
+            ),
         ]);
 
         return view('Index.chengji',[
