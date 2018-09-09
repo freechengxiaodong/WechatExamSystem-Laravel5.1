@@ -62,6 +62,9 @@ class IndexController extends Controller
         ]);
     }
     public function dafen(Request $request){
+        $openid = $request->session()->get('openid');
+        $usr = new Student();
+        $usrinfo = $usr->where('openid','=',"$openid")->first();
         $dui = $request->input('dui');
         $count = $request->input('count');
         $score = (integer)($dui/$count*100);
@@ -69,6 +72,7 @@ class IndexController extends Controller
             'dui' => $dui,
             'count' => $count,
             'score' => $score,
+            'user' => $usrinfo,
         ]);
     }
 }
