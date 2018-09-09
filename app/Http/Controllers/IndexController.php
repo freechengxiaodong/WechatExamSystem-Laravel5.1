@@ -15,7 +15,6 @@ class IndexController extends Controller
     public function grant()
     {
         $url='exam.delin0.cn'.'/callback';
-        echo $url;die;
         $weixin=new WeixinController();
         $weixin->getUserDetail($url);
     }

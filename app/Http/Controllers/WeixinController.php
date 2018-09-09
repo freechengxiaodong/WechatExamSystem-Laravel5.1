@@ -35,8 +35,7 @@ class WeixinController extends Controller
 
     }
 
-
-	//数据库获取全局access_token
+	//access_token
 	public function getWxAccessToken(){
 		$res = DB::table('token')->whereId(1)->first();
 		if(strtotime($res->updated_at) > time()){
@@ -57,12 +56,8 @@ class WeixinController extends Controller
 			return $access_token;
 		}
 	}
-
-    //返回curl
     public function http_curl($url,$type="get",$res="json",$arr=""){
-        //1.初始化curl
         $ch = curl_init();
-        //2.设置url的参数
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         if ($type == "post") {
@@ -70,11 +65,7 @@ class WeixinController extends Controller
             curl_setopt($ch, CURLOPT_POSTFIELDS, $arr);
         }
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        //3.采集
         $output = curl_exec($ch);
-
-        //4.关闭curl
-
         if ($res == "json") {
             if (curl_errno($ch)) {
                 return curl_error($ch);
@@ -84,28 +75,9 @@ class WeixinController extends Controller
         }
         curl_close($ch);
     }
-
-	//获取微信服务器ip
-	public function getWxServerIp(){
-		$accessToken = $this->getWxAccessToken();
-		$url = 'https://api.weixin.qq.com/cgi-bin/getcallbackip?access_token='.$accessToken;
-		$ch = curl_init();
-		//2.设置URL参数
-		curl_setopt($ch, CURLOPT_URL, $url);
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
-		//3.采集
-		$res = curl_exec($ch);
-		if(curl_errno($ch)){
-			var_dump(curl_error($ch));
-		}
-		curl_close($ch);
-		$arr = json_decode($res,true);
-		echo '<pre>';
-		var_dump($arr);
-	}
-
 	//微信授权
 	function getUserDetail($redirect_uri){
+        echo $redirect_uri;die;
         $url='https://open.weixin.qq.com/connect/oauth2/authorize?appid='.$this->appid.'&redirect_uri='.$redirect_uri.'&response_type=code&scope=snsapi_userinfo&state=123#wechat_redirect ';
         echo '<script>window.open("'.$url.'",true);</script>';
     }
