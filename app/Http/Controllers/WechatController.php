@@ -106,7 +106,6 @@ class WechatController extends Controller
     public function definedItem(){
         $obj=new WeixinController;
         $access_token = $obj->getWxAccessToken();
-        dd($access_token);die;
         $url = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=".$access_token;
         $postJson = '{ 
                 "button":[

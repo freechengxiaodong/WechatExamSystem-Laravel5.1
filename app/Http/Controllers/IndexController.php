@@ -11,11 +11,33 @@ use App\Http\Controllers\Controller;
 
 class IndexController extends Controller
 {
+    //授权
+    public function grant()
+    {
+        $url=url().'/callback';
+        $weixin=new WeixinController();
+        $weixin->getUserDetail($url);
+    }
+
+    //回调数据存数据库
+    public function callback()
+    {
+        //接收授权的用户信息
+        $weixin=new WeixinController();
+        $info=$weixin->getUserInfo();
+
+        //session存储openid
+        session(['openid'=>$info['openid']]);
+        echo "location.href='".'/loginConfirm'."';</script>";
+    }
     public function loginConfirm(){
         //扫码关注后来到这里,检测是否需要手动填入班级学号信息
-        $obj=new WeixinController;
-        $info = $obj->getUserInfo();
-        dd($info);
+        $weixin=new WeixinController();
+        $info=$weixin->getUserInfo();
+        dd($info);die;
+        //session存储openid
+        session(['openid'=>$info['openid']]);
+
         $openid = $info['openid'];
         $usr = new Student();
         $usrinfo = $usr->where('openid','=',"$openid")->first();
