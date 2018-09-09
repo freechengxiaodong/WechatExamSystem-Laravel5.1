@@ -12,14 +12,13 @@ use Log;
 class WechatController extends Controller
 {
     public $url = 'http://exam.delin0.cn';
-    //连接微信服务器L8SpWFN4v3AlwNuQecYPdqaBJPPc7Lia1cyDcCRPBXk
 
 
     public function index() {
         //1.将timestamp,nonce,token按字典序排列
         $timestamp= $_GET['timestamp'];
         $nonce = $_GET['nonce'];
-        $token  = 'religion';   //宗教
+        $token  = 'weixin';   
         $signature = $_GET['signature'];
         $echostr = $_GET['echostr'];
 
