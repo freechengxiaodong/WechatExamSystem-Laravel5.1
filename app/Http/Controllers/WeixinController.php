@@ -40,6 +40,7 @@ class WeixinController extends Controller
 	public function getWxAccessToken(){
 		$res = DB::table('token')->whereId(1)->first();
 		if(strtotime($res->updated_at) > time()){
+		    echo 222;die;
 			return $res->content;
 		}else{
 			$url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid='.$this->appid.'&secret='.$this->appsecret;
