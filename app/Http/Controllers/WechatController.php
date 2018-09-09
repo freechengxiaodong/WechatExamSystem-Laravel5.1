@@ -18,7 +18,7 @@ class WechatController extends Controller
         //1.将timestamp,nonce,token按字典序排列
         $timestamp= $_GET['timestamp'];
         $nonce = $_GET['nonce'];
-        $token  = 'weixin';   
+        $token  = 'weixin';
         $signature = $_GET['signature'];
         $echostr = $_GET['echostr'];
 
