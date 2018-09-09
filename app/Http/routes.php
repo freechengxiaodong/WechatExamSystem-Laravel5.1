@@ -11,7 +11,7 @@
 |
 */
 
-Route::any('/weixin','WechatController@checkSignature');
+Route::any('/weixin','WechatController@index');
 Route::any('/loginConfirm','IndexController@loginConfirm');
 
 
