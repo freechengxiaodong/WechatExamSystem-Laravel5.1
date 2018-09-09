@@ -1,4 +1,5 @@
 <?php
+echo 222;
 define("TOKEN", "weixin");
 $wechatObj = new wechatCallbackapiTest();
 $wechatObj->valid();
