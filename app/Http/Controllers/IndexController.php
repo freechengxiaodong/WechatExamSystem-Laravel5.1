@@ -21,7 +21,7 @@ class IndexController extends Controller
     }
     public function grantt()
     {
-        $url=url().'/shouquan';
+        $url=url().'/shouquant';
         $weixin=new WeixinController();
         $weixin->getUserDetail($url);
     }
