@@ -106,7 +106,12 @@ class IndexController extends Controller
         if($info){
             echo "<script>location.href='".'/chooseshijuan'."';</script>";
         }else{
-            echo "<script>alert('未检测到教师信息,请联系管理员添加!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
+            $title = 'error';
+            $content = '未检测到教师信息,请联系管理员添加!';
+            return view('warning.msg',[
+                'title' => $title,
+                'content' => $content,
+            ]);
         }
     }
     public function chooseshijuan(){
