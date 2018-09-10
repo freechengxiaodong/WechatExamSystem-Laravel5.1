@@ -159,9 +159,16 @@ class IndexController extends Controller
             ]);
         }
     }
-    public function chooseshijuan(){
+    public function chooseshijuan(Request $request){
         //$obj = DB::table('tests')->where('id', '>' ,'0')->get();
-        return view('Index.chooseshijuan');
+        $obj = [];
+            if($request->input('flag') == '1'){
+                $shijuanid = DB::table('shijuans')->max('id');
+                $obj = DB::table('counts')->where('shijuan_id','=',$shijuanid)->orderBy('score','DESC')->get();
+            }
+        return view('Index.chooseshijuan',[
+            'obj' => $obj,
+        ]);
     }
     public function shijuanInsert(Request $request){
         $zhangjie = $request->input('zhangjie');

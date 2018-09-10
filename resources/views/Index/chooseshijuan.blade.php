@@ -9,14 +9,16 @@
     <div class="weui-tab">
         <div class="weui-navbar">
             <div class="weui-navbar__item weui-bar__item--on">
-                选项一
+                试题选择
             </div>
             <div class="weui-navbar__item">
-                选项二
+                <a href="{{url('/chooseshijuan?flag=1')}}" style="display: block;text-decoration: none;color: black">成绩单</a>
             </div>
         </div>
         <div class="weui-tab__bd">
 
+
+            @if($_GET['flag'] == 0)
             <form action="{{url('/shijuanInsert')}}" method="post" style="border: 1px solid darkgray;border-radius: 10px;height: 400px;width: 80%;margin-top: 100px">
                 <div class="weui-cells__title" style="font-size: 22px;text-align: center;color: green">试题选择</div>
                 <div class="weui-cells__title">选择章节</div>
@@ -47,6 +49,9 @@
                 <input type="hidden" name="openid" value="">
                 <button class="weui-btn weui-btn_plain-primary" style="width: 80%;margin-top: 40px">生成试卷</button>
             </form>
+                @else
+            这是成绩表
+                @endif
 
         </div>
 
