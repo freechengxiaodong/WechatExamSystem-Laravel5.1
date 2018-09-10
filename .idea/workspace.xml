@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e50f1b37-efc9-4e7b-ade7-28014cdd286d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Index/chengji.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Index/chengji.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Index/shijuan.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Index/shijuan.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,13 +42,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="env" value="14" />
-          <entry key="php" value="4561" />
+          <entry key="php" value="4616" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Blade" value="1403" />
-          <entry key="PHP" value="3158" />
+          <entry key="Blade" value="1404" />
+          <entry key="PHP" value="3212" />
           <entry key="PLAIN_TEXT" value="14" />
         </counts>
       </usages-collector>
@@ -90,8 +88,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/IndexController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="93" column="75" selection-start-line="93" selection-start-column="75" selection-end-line="93" selection-end-column="75" />
+            <state relative-caret-position="320">
+              <caret line="94" column="25" selection-start-line="94" selection-start-column="25" selection-end-line="94" selection-end-column="25" />
               <folding>
                 <element signature="e#40#90#0#PHP" expanded="true" />
               </folding>
@@ -130,8 +128,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Index/chengji.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-585">
-              <caret line="26" column="6" lean-forward="true" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
+            <state relative-caret-position="195">
+              <caret line="23" column="76" lean-forward="true" selection-start-line="23" selection-start-column="76" selection-end-line="23" selection-end-column="76" />
               <folding>
                 <element signature="e#628#647#0#HTML" expanded="true" />
                 <element signature="e#640#646#0#HTML" expanded="true" />
@@ -397,15 +395,15 @@
       <workItem from="1536457892538" duration="28916000" />
       <workItem from="1536498707923" duration="247000" />
       <workItem from="1536499766184" duration="97000" />
-      <workItem from="1536540995577" duration="1481000" />
+      <workItem from="1536540995577" duration="1792000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40618000" />
+    <option name="totallyTimeSpent" value="40929000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="158" y="788" width="1729" height="920" extended-state="0" />
+    <frame x="52" y="98" width="1729" height="920" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1527861" />
@@ -609,8 +607,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Index/chengji.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-585">
-          <caret line="26" column="6" lean-forward="true" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
+        <state relative-caret-position="195">
+          <caret line="23" column="76" lean-forward="true" selection-start-line="23" selection-start-column="76" selection-end-line="23" selection-end-column="76" />
           <folding>
             <element signature="e#628#647#0#HTML" expanded="true" />
             <element signature="e#640#646#0#HTML" expanded="true" />
@@ -621,8 +619,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="93" column="75" selection-start-line="93" selection-start-column="75" selection-end-line="93" selection-end-column="75" />
+        <state relative-caret-position="320">
+          <caret line="94" column="25" selection-start-line="94" selection-start-column="25" selection-end-line="94" selection-end-column="25" />
           <folding>
             <element signature="e#40#90#0#PHP" expanded="true" />
           </folding>
