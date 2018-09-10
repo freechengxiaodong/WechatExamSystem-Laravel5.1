@@ -13,7 +13,7 @@
             <div class="weui-msg__text-area">
                 <h2 class="weui-msg__title">{{$content}}</h2>
             </div>
-            <div class="weui-msg__opr-area">
+            <div class="weui-msg__opr-area" style="margin-top: 100px">
                 <p class="weui-btn-area">
                     <a onclick="WeixinJSBridge.call('closeWindow');" class="weui-btn weui-btn_primary">关闭本页面</a>
                 </p>
