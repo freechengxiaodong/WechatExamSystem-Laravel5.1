@@ -8,10 +8,22 @@
     </style>
     <div class="weui-tab">
         <div class="weui-navbar">
-            <div class="weui-navbar__item weui-bar__item--on">
-                试题选择
+            <div class="weui-navbar__item
+             @if(isset($_GET['flag']))
+                    @else
+                    weui-bar__item--on
+            @endif
+             ">
+                <a href="{{url('/chooseshijuan')}}" style="display: block;text-decoration: none;color: black">试题选择</a>
             </div>
-            <div class="weui-navbar__item">
+            <div class="weui-navbar__item
+            @if(isset($_GET['flag']))
+            @if($_GET['flag'] == 1)
+                    weui-bar__item--on
+                @endif
+            @endif
+
+                    ">
                 <a href="{{url('/chooseshijuan?flag=1')}}" style="display: block;text-decoration: none;color: black">成绩单</a>
             </div>
         </div>
