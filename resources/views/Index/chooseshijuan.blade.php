@@ -90,7 +90,7 @@
                                 </tr>
                                 @endforeach
                             <tr>
-                                <td>本次测试平均分88</td>
+                                <th>本次测试平均分88</th>
                             </tr>
                         </table>
 
