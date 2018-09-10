@@ -15,6 +15,7 @@
                 选项二
             </div>
         </div>
+    </div>
         <form action="{{url('/shijuanInsert')}}" method="post" style="border: 1px solid darkgray;border-radius: 10px;height: 400px;width: 80%;margin-top: 100px">
             <div class="weui-cells__title" style="font-size: 22px;text-align: center;color: green">试题选择</div>
             <div class="weui-cells__title">选择章节</div>
