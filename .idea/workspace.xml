@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e50f1b37-efc9-4e7b-ade7-28014cdd286d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/Index/chooseshijuan.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Index/chooseshijuan.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Index/shijuan.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Index/shijuan.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,12 +42,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="env" value="14" />
-          <entry key="php" value="5528" />
+          <entry key="php" value="5539" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Blade" value="1842" />
+          <entry key="Blade" value="1853" />
           <entry key="PHP" value="3686" />
           <entry key="PLAIN_TEXT" value="14" />
         </counts>
@@ -97,14 +97,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Index/chooseshijuan.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="92" column="103" selection-start-line="92" selection-start-column="103" selection-end-line="92" selection-end-column="103" />
+            <state relative-caret-position="280">
+              <caret line="86" column="54" lean-forward="true" selection-start-line="86" selection-start-column="54" selection-end-line="86" selection-end-column="54" />
               <folding>
                 <element signature="e#328#385#0#HTML" expanded="true" />
                 <element signature="e#372#429#0#HTML" expanded="true" />
+                <element signature="e#3409#3469#0#HTML" expanded="true" />
                 <element signature="e#513#610#0#HTML" expanded="true" />
                 <element signature="e#651#706#0#HTML" expanded="true" />
                 <element signature="e#1370#1394#0#HTML" expanded="true" />
@@ -135,11 +136,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Index/shijuan.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="89" column="34" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="34" />
+            <state relative-caret-position="281">
+              <caret line="30" column="25" lean-forward="true" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
               <folding>
                 <element signature="e#2403#2422#0#HTML" expanded="true" />
                 <element signature="e#2409#2415#0#HTML" expanded="true" />
@@ -207,11 +208,11 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/WeixinController.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/resources/views/warning/msg.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Index/shijuan.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Index/chengji.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/WechatController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" />
         <option value="$PROJECT_DIR$/resources/views/Index/chooseshijuan.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Index/shijuan.blade.php" />
       </list>
     </option>
   </component>
@@ -421,15 +422,15 @@
       <workItem from="1536457892538" duration="28916000" />
       <workItem from="1536498707923" duration="247000" />
       <workItem from="1536499766184" duration="97000" />
-      <workItem from="1536540995577" duration="10114000" />
+      <workItem from="1536540995577" duration="10374000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49251000" />
+    <option name="totallyTimeSpent" value="49511000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="124" y="194" width="1729" height="920" extended-state="0" />
+    <frame x="96" y="105" width="1729" height="920" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1527861" />
@@ -586,20 +587,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Index/shijuan.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="89" column="34" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="34" />
-          <folding>
-            <element signature="e#2403#2422#0#HTML" expanded="true" />
-            <element signature="e#2409#2415#0#HTML" expanded="true" />
-            <element signature="e#2441#2447#0#HTML" expanded="true" />
-            <element signature="e#2445#2465#0#HTML" expanded="true" />
-            <element signature="e#2455#2485#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Index/chengji.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -648,15 +635,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Index/chooseshijuan.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="92" column="103" selection-start-line="92" selection-start-column="103" selection-end-line="92" selection-end-column="103" />
+        <state relative-caret-position="280">
+          <caret line="86" column="54" lean-forward="true" selection-start-line="86" selection-start-column="54" selection-end-line="86" selection-end-column="54" />
           <folding>
             <element signature="e#328#385#0#HTML" expanded="true" />
             <element signature="e#372#429#0#HTML" expanded="true" />
+            <element signature="e#3409#3469#0#HTML" expanded="true" />
             <element signature="e#513#610#0#HTML" expanded="true" />
             <element signature="e#651#706#0#HTML" expanded="true" />
             <element signature="e#1370#1394#0#HTML" expanded="true" />
             <element signature="e#1905#1940#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Index/shijuan.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="30" column="25" lean-forward="true" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+          <folding>
+            <element signature="e#2403#2422#0#HTML" expanded="true" />
+            <element signature="e#2409#2415#0#HTML" expanded="true" />
+            <element signature="e#2441#2447#0#HTML" expanded="true" />
+            <element signature="e#2445#2465#0#HTML" expanded="true" />
+            <element signature="e#2455#2485#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
