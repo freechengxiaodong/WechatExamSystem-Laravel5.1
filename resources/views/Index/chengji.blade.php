@@ -31,6 +31,11 @@
         <h2><span style="font-size: 60px;color: red"  class="timer count-title" id="count-number" data-to="{{$score}}" data-speed="1500">0</span>
             <span style="font-size: 20px">分</span></h2>
     </div>
+    <div class="weui-msg__opr-area">
+        <p class="weui-btn-area">
+            <a onclick="WeixinJSBridge.call('closeWindow');" class="weui-btn weui-btn_plain-primary">关闭本页面</a>
+        </p>
+    </div>
     <script src="/other/js/jquery.min.js"></script>
     <script type="text/javascript" src="/other/js/count.js"></script>
     <script>
