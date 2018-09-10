@@ -169,7 +169,8 @@ class IndexController extends Controller
                 //遍历数据对象,组合带学生姓名的数据
                 foreach($obj as $k => $v){
                     $info = DB::table('students')->where('id','=',$v->student_id)->first();
-                    $v['name'] = $info->name;
+                    echo $info->name;
+                    //$v['name'] = $info->name;
                 }
             }
             dd($obj);die;
