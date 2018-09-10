@@ -165,7 +165,7 @@ class IndexController extends Controller
         if($request->input('flag')){
             if($request->input('flag') == '1'){
                 $shijuanid = DB::table('shijuans')->max('id');
-                $obj = DB::table('counts')->where('shijuan_id','=',$shijuanid)->orderBy('score','DESC')->get();
+                $obj = DB::table('counts')->where('shijuan_id','=',$shijuanid)->orderBy('grade','DESC')->get();
             }
         }
         return view('Index.chooseshijuan',[
