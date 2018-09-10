@@ -91,8 +91,7 @@ class IndexController extends Controller
         $usr = new Student();
         $usrinfo = $usr->where('openid','=',"$openid")->first();
         $uid = $usrinfo->id;
-        $default = DB::table('tests')->where('shijuan_id','=',$id)->first();
-        dd($default);die;
+        $default = DB::table('counts')->where('shijuan_id','=',$id)->Where('student_id','=',$uid)->first();
         if($default){
             $title = 'error';
             $content = '已提交试卷,不可重复考试!';
