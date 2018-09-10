@@ -28,6 +28,7 @@
             margin-bottom: 18px;
             text-align: left;
             display: inline-block;
+            width: 80%;
         }
         .answers label{
             display: block;
