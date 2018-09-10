@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e50f1b37-efc9-4e7b-ade7-28014cdd286d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Index/chooseshijuan.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Index/chooseshijuan.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,13 +42,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="env" value="14" />
-          <entry key="php" value="5281" />
+          <entry key="php" value="5370" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Blade" value="1710" />
-          <entry key="PHP" value="3571" />
+          <entry key="Blade" value="1782" />
+          <entry key="PHP" value="3588" />
           <entry key="PLAIN_TEXT" value="14" />
         </counts>
       </usages-collector>
@@ -101,8 +100,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Index/chooseshijuan.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="50" column="38" lean-forward="true" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="38" />
+            <state relative-caret-position="300">
+              <caret line="81" column="72" lean-forward="true" selection-start-line="81" selection-start-column="72" selection-end-line="81" selection-end-column="72" />
               <folding>
                 <element signature="e#328#385#0#HTML" expanded="true" />
                 <element signature="e#372#429#0#HTML" expanded="true" />
@@ -304,8 +303,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="102" />
-    <option name="y" value="226" />
+    <option name="x" value="124" />
+    <option name="y" value="194" />
     <option name="width" value="1729" />
     <option name="height" value="920" />
   </component>
@@ -422,15 +421,15 @@
       <workItem from="1536457892538" duration="28916000" />
       <workItem from="1536498707923" duration="247000" />
       <workItem from="1536499766184" duration="97000" />
-      <workItem from="1536540995577" duration="8995000" />
+      <workItem from="1536540995577" duration="9308000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48132000" />
+    <option name="totallyTimeSpent" value="48445000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="106" y="335" width="1729" height="920" extended-state="0" />
+    <frame x="124" y="194" width="1729" height="920" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1527861" />
@@ -639,8 +638,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Index/chooseshijuan.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="50" column="38" lean-forward="true" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="38" />
+        <state relative-caret-position="300">
+          <caret line="81" column="72" lean-forward="true" selection-start-line="81" selection-start-column="72" selection-end-line="81" selection-end-column="72" />
           <folding>
             <element signature="e#328#385#0#HTML" expanded="true" />
             <element signature="e#372#429#0#HTML" expanded="true" />

@@ -172,6 +172,7 @@ class IndexController extends Controller
                     $obj["$k"]['name'] = $info->name;
                 }
             }
+            dd($obj);die;
         }
         return view('Index.chooseshijuan',[
             'obj' => $obj,
