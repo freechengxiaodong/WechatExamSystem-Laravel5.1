@@ -6,6 +6,34 @@
             margin: 0 auto;
         }
     </style>
+    <style type="text/css">
+        table.altrowstable {
+            font-family: verdana,arial,sans-serif;
+            font-size:11px;
+            color:#333333;
+            border-width: 1px;
+            border-color: #a9c6c9;
+            border-collapse: collapse;
+        }
+        table.altrowstable th {
+            border-width: 1px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #a9c6c9;
+        }
+        table.altrowstable td {
+            border-width: 1px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #a9c6c9;
+        }
+        .oddrowcolor{
+            background-color:#d4e3e5;
+        }
+        .evenrowcolor{
+            background-color:#c3dde0;
+        }
+    </style>
     <div class="weui-tab">
         <div class="weui-navbar">
             <div class="weui-navbar__item
@@ -18,21 +46,67 @@
             </div>
             <div class="weui-navbar__item
             @if(isset($_GET['flag']))
-            @if($_GET['flag'] == 1)
+                @if($_GET['flag'] == 1)
                     weui-bar__item--on
                 @endif
             @endif
-
                     ">
                 <a href="{{url('/chooseshijuan?flag=1')}}" style="display: block;text-decoration: none;color: black">成绩单</a>
             </div>
         </div>
         <div class="weui-tab__bd">
-
-
             @if(isset($_GET['flag']))
                 @if($_GET['flag'] == 1)
-                    这是成绩表
+                        <script type="text/javascript">
+                            function altRows(id){
+                                if(document.getElementsByTagName){
+
+                                    var table = document.getElementById(id);
+                                    var rows = table.getElementsByTagName("tr");
+
+                                    for(i = 0; i < rows.length; i++){
+                                        if(i % 2 == 0){
+                                            rows[i].className = "evenrowcolor";
+                                        }else{
+                                            rows[i].className = "oddrowcolor";
+                                        }
+                                    }
+                                }
+                            }
+
+                            window.onload=function(){
+                                altRows('alternatecolor');
+                            }
+                        </script>
+                        <table class="altrowstable" id="alternatecolor">
+                            <tr>
+                                <th>排名</th><th>姓名</th><th>分数</th>
+                            </tr>
+                            <tr>
+                                <td>1</td><td>qwe</td><td>34</td>
+                            </tr>
+                            <tr>
+                                <td>2</td><td>Text 2B</td><td>67</td>
+                            </tr>
+                            </tr>
+                            <tr>
+                                <td>3</td><td>Text 3B</td><td>Text 3C</td>
+                            </tr>
+                            <tr>
+                                <td>4</td><td>Text 4B</td><td>Text 4C</td>
+                            </tr>
+                        </table>
+
+                        <!--  The table code can be found here: http://www.textfixer/resources/css-tables.php#css-table03 -->
+
+
+
+
+
+
+
+
+
                     @endif
             @else
             <form action="{{url('/shijuanInsert')}}" method="post" style="height: 400px;width: 80%;margin-top: 50px">
