@@ -87,7 +87,7 @@
         }
         timer = setInterval("CountDown()", 1000);
     </SCRIPT>
-    <h1><span style="left: right">姓名:{{$user->name}}</span>>&nbsp;&nbsp;&nbsp;&nbsp;<span style="float: right">剩余时间:<span id="timer" style="color:red;"></span></span></h1>
+    <h1><span style="float: left">姓名:{{$user->name}}</span>&nbsp;&nbsp;&nbsp;&nbsp;<span style="float: right">剩余时间:<span id="timer" style="color:red;"></span></span></h1>
 <div class="quiz-container">
     <div id="quiz"></div>
 </div>

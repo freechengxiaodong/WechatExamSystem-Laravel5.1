@@ -90,6 +90,16 @@ class IndexController extends Controller
         $openid = $request->session()->get('openid');
         $usr = new Student();
         $usrinfo = $usr->where('openid','=',"$openid")->first();
+        $uid = $usrinfo->id;
+        $default = DB::table('tests')->where('shijuan_id','=',$id)->Where('student_id','=',$uid)->first();
+        if($default){
+            $title = 'error';
+            $content = '已提交试卷,不可重复考试!';
+            return view('warning.msg',[
+                'title' => $title,
+                'content' => $content,
+            ]);
+        }
 
         $obj = DB::table('tests')
             ->where('chapter','=',"$zhangjie")

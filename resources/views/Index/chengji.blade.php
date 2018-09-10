@@ -21,7 +21,7 @@
             color: #fff;
         }
     </style>
-    <h1>姓名:{{$user->name}}&nbsp;&nbsp;</h1>
+    <h1><span style="float: left">姓名:{{$user->name}}</span>&nbsp;&nbsp;</h1>
 <div class="quiz-container">
     <div id="quiz"></div>
 </div>
@@ -33,6 +33,15 @@
     </div>
     <script src="/other/js/jquery.min.js"></script>
     <script type="text/javascript" src="/other/js/count.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            if (window.history && window.history.pushState) {
+                $(window).on('popstate', function () {
+                    window.history.forward(1);
+                });
+            }
+        });
+    </script>
     <script>
         $.fn.countTo = function(a) {
             a = a || {};
