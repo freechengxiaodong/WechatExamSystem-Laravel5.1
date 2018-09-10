@@ -89,6 +89,9 @@
                                     <td>{{$k+1}}</td><td>{{$v->name}}</td><td>{{$v->grade}}</td>
                                 </tr>
                                 @endforeach
+                            <tr>
+                                <td>本次测试平均分88</td>
+                            </tr>
                         </table>
 
                         <!--  The table code can be found here: http://www.textfixer/resources/css-tables.php#css-table03 -->
