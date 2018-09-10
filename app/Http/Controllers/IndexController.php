@@ -162,9 +162,11 @@ class IndexController extends Controller
     public function chooseshijuan(Request $request){
         //$obj = DB::table('tests')->where('id', '>' ,'0')->get();
         $obj = [];
+        $avgscore = '';
         if($request->input('flag')){
             if($request->input('flag') == '1'){
                 $shijuanid = DB::table('shijuans')->max('id');
+                $avgscore = DB::table('counts')->avg('grade');
                 $obj = DB::table('counts')->where('shijuan_id','=',$shijuanid)->orderBy('grade','DESC')->get();
                 //遍历数据对象,组合带学生姓名的数据
                 foreach($obj as $k => $v){
@@ -175,6 +177,7 @@ class IndexController extends Controller
         }
         return view('Index.chooseshijuan',[
             'obj' => $obj,
+            'avgscore' => $avgscore,
         ]);
     }
     public function shijuanInsert(Request $request){

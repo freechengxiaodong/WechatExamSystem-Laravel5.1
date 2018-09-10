@@ -92,7 +92,7 @@
                         </table>
                     <table class="altrowstable" id="alternatecolor" style="background-color: green;color: white;font-size: 20px">
                         <tr>
-                            <th>平均分　88分</th>
+                            <th>平均分　{{$avgscore}}分</th>
                         </tr>
                     </table>
 
