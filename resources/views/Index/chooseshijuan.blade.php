@@ -14,6 +14,7 @@
             border-width: 1px;
             border-color: #a9c6c9;
             border-collapse: collapse;
+            width: 100%;
         }
         table.altrowstable th {
             border-width: 1px;
