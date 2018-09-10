@@ -59,34 +59,31 @@ class IndexController extends Controller
         //检测教师是否有推出试卷
         $id = DB::table('shijuans')->max('id');
         $res = DB::table('shijuans')->find($id);
-        $shijuantime = $res->created_at;
-        $currenttime = time();
-        $hour = floor($shijuantime/3600);
-        $minute = floor(($shijuantime-3600 * $hour)/60);
-        $shijuantime1 = $hour*60+$minute;
-        $hour1 = floor($currenttime/3600);
-        $minute1 = floor(($currenttime-3600 * $hour)/60);
-        $currenttime1 = $hour1*60+$minute1;
-        $cha = $currenttime1-$shijuantime1;
-        if($cha >= 60 ){
-            $title = 'error';
-            $content = '暂无试卷!';
-            return view('warning.msg',[
-                'title' => $title,
-                'content' => $content,
-            ]);
-        }
-        session([
-            'flag'=>'1',
-        ]);
-        if($request->session()->get('flag'=='0') ){
-            $title = 'error';
-            $content = '不可重复考试!';
-            return view('warning.msg',[
-                'title' => $title,
-                'content' => $content,
-            ]);
-        }
+//        $shijuantime = $res->created_at;
+//        $currenttime = time();
+//        $hour = floor($shijuantime/3600);
+//        $minute = floor(($shijuantime-3600 * $hour)/60);
+//        $shijuantime1 = $hour*60+$minute;
+//        $hour1 = floor($currenttime/3600);
+//        $minute1 = floor(($currenttime-3600 * $hour)/60);
+//        $currenttime1 = $hour1*60+$minute1;
+//        $cha = $currenttime1-$shijuantime1;
+//        if($cha >= 60 ){
+//            $title = 'error';
+//            $content = '暂无试卷!';
+//            return view('warning.msg',[
+//                'title' => $title,
+//                'content' => $content,
+//            ]);
+//        }
+//        if($request->session()->get('flag'=='0') ){
+//            $title = 'error';
+//            $content = '不可重复考试!';
+//            return view('warning.msg',[
+//                'title' => $title,
+//                'content' => $content,
+//            ]);
+//        }
         $zhangjie = $res->zhangjie;
         $count = $res->count;
         //有测试的话根据教师本次的选题进行试题生成
@@ -115,9 +112,6 @@ class IndexController extends Controller
         $count = $request->input('count');
         $score = (integer)($dui/$count*100);
         $cuo = $count-$dui;
-        session([
-            'flag'=>'0',
-        ]);
         DB::table('counts')->insert([
             'shijuan_id' => $shijuanid,
             'student_id' => $stuid,
