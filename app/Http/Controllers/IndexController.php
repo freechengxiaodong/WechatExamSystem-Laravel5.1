@@ -167,6 +167,7 @@ class IndexController extends Controller
             if($request->input('flag') == '1'){
                 $shijuanid = DB::table('shijuans')->max('id');
                 $avgscore = DB::table('counts')->avg('grade');
+                $avgscore = (int)($avgscore);
                 $obj = DB::table('counts')->where('shijuan_id','=',$shijuanid)->orderBy('grade','DESC')->get();
                 //遍历数据对象,组合带学生姓名的数据
                 foreach($obj as $k => $v){
