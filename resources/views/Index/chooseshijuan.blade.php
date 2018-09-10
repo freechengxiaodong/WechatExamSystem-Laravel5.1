@@ -90,7 +90,7 @@
                                 </tr>
                                 @endforeach
                         </table>
-                    <table class="altrowstable" id="alternatecolor" style="background-color: green;color: white;font-size: 20px">
+                    <table class="altrowstable" id="alternatecolor" style="background-color: dodgerblue;color: white;font-size: 20px">
                         <tr>
                             <th>平均分　{{$avgscore}}分</th>
                         </tr>
