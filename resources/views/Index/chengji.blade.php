@@ -31,17 +31,28 @@
         <h2><span style="font-size: 60px;color: red"  class="timer count-title" id="count-number" data-to="{{$score}}" data-speed="1500">0</span>
             <span style="font-size: 20px">分</span></h2>
     </div>
+    <div onload="closeWindow();">
+        <div id="show">
+            将倒计时10秒后关闭当前窗口，返回微信公众号窗口
+        </div>
+    </div>
+    <script type="text/javascript">
+        var time=5;
+        function closeWindow(){
+            window.setTimeout('closeWindow()',1000);
+            if(time>0){
+                document.getElementById("show").innerHTML=" 将倒计时<font color=red>"+time+"</font>秒后关闭当前窗口,返回微信公众号窗口";
+                time--;
+            }else{
+                WeixinJSBridge.call('closeWindow');
+//this.window.opener=null; //关闭窗口时不出现提示窗口
+//window.close();
+            }
+        }
+        </script>
     <script src="/other/js/jquery.min.js"></script>
     <script type="text/javascript" src="/other/js/count.js"></script>
-    <script type="text/javascript">
-        jQuery(document).ready(function ($) {
-            if (window.history && window.history.pushState) {
-                $(window).on('popstate', function () {
-                    window.history.forward(1);
-                });
-            }
-        });
-    </script>
+
     <script>
         $.fn.countTo = function(a) {
             a = a || {};
