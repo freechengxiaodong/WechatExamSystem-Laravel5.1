@@ -76,6 +76,17 @@ class IndexController extends Controller
                 'content' => $content,
             ]);
         }
+        session([
+            'flag'=>'1',
+        ]);
+        if($request->session()->get('flag'=='0') ){
+            $title = 'error';
+            $content = '不可重复考试!';
+            return view('warning.msg',[
+                'title' => $title,
+                'content' => $content,
+            ]);
+        }
         $zhangjie = $res->zhangjie;
         $count = $res->count;
         //有测试的话根据教师本次的选题进行试题生成
@@ -91,9 +102,11 @@ class IndexController extends Controller
         return view('Index.shijuan',[
            'obj' => $obj,
             'user' => $usrinfo,
+            'shijuanid' => $id,
         ]);
     }
     public function dafen(Request $request){
+        $shijuanid = $request->input('shijuanid');
         $openid = $request->session()->get('openid');
         $usr = new Student();
         $usrinfo = $usr->where('openid','=',"$openid")->first();
@@ -102,8 +115,11 @@ class IndexController extends Controller
         $count = $request->input('count');
         $score = (integer)($dui/$count*100);
         $cuo = $count-$dui;
-
+        session([
+            'flag'=>'0',
+        ]);
         DB::table('counts')->insert([
+            'shijuan_id' => $shijuanid,
             'student_id' => $stuid,
             'grade' => $score,
             'content' => "对".$dui."道题,错"."$cuo"."道题",

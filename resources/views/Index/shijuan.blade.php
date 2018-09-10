@@ -1,5 +1,5 @@
 @extends('layout.father')
-@section('title','试卷')
+@section('title','正在答题')
 @section('content')
     <style type="text/css">
         @import url(https://fonts.googleapis.com/css?family=Work+Sans:300,600);
@@ -87,7 +87,7 @@
         }
         timer = setInterval("CountDown()", 1000);
     </SCRIPT>
-<h1>姓名:{{$user->name}}&nbsp;&nbsp;学号:{{$user->number}}&nbsp;&nbsp;时间:<span id="timer" style="color:red"></span></h1>
+<h1>姓名:{{$user->name}}&nbsp;&nbsp;&nbsp;&nbsp;剩余时间:<span id="timer" style="color:red;float: right"></span></h1>
 <div class="quiz-container">
     <div id="quiz"></div>
 </div>
@@ -176,7 +176,7 @@
 
             // show number of correct answers out of total
             //resultsContainer.innerHTML = `你答对了${myQuestions.length}中的${numCorrect}`;
-            window.location.href = "/dafen?dui="+numCorrect+"&count="+myQuestions.length;
+            window.location.href = "/dafen?dui="+numCorrect+"&count="+myQuestions.length+"&shijuanid="+"{{$shijuanid}}"";
         }
 
         function showSlide(n) {
