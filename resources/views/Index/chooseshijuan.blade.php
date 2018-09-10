@@ -35,9 +35,9 @@
                     这是成绩表
                     @endif
             @else
-            <form action="{{url('/shijuanInsert')}}" method="post" style="height: 400px;width: 80%;margin-top: 70px">
+            <form action="{{url('/shijuanInsert')}}" method="post" style="height: 400px;width: 80%;margin-top: 50px">
                 <div class="weui-cells__title" style="font-size: 22px;text-align: center;color: green">测试内容</div>
-                <div class="weui-cells__title">选择章节</div>
+                <div class="weui-cells__title" style="margin-top: 20px">选择章节</div>
                 <div class="weui-cell weui-cell_select">
                     <div class="weui-cell__bd">
                         <select class="weui-select" name="zhangjie">
