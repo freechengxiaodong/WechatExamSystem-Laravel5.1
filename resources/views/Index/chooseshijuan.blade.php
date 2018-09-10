@@ -90,7 +90,7 @@
                                 </tr>
                                 @endforeach
                         </table>
-                    <table class="altrowstable" id="alternatecolor" style="background-color: green">
+                    <table class="altrowstable" id="alternatecolor" style="background-color: darkolivegreen">
                         <tr>
                             <th>本次测试平均分88</th>
                         </tr>
