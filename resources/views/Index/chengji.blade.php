@@ -37,8 +37,8 @@
         $(function(){
             pushHistory();
             window.addEventListener("popstate", function(e) {  //回调函数中实现需要的功能
-                 alert("我监听到了浏览器的返回按钮事件啦");
-                //WeixinJSBridge.call('closeWindow');
+                 //alert("我监听到了浏览器的返回按钮事件啦");
+                WeixinJSBridge.call('closeWindow');
             }, false);
         });
     </script>

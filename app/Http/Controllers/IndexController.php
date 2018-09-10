@@ -122,6 +122,15 @@ class IndexController extends Controller
         $count = $request->input('count');
         $score = (integer)($dui/$count*100);
         $cuo = $count-$dui;
+        $default = DB::table('counts')->where('shijuan_id','=',$shijuanid)->Where('student_id','=',$stuid)->first();
+        if($default){
+            $title = 'error';
+            $content = '已提交试卷,不可重复提交!';
+            return view('warning.msg',[
+                'title' => $title,
+                'content' => $content,
+            ]);
+        }
         DB::table('counts')->insert([
             'shijuan_id' => $shijuanid,
             'student_id' => $stuid,
