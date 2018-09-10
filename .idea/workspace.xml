@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e50f1b37-efc9-4e7b-ade7-28014cdd286d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Index/chengji.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Index/chengji.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Index/shijuan.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Index/shijuan.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,13 +43,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="env" value="14" />
-          <entry key="php" value="4450" />
+          <entry key="php" value="4480" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Blade" value="1373" />
-          <entry key="PHP" value="3077" />
+          <entry key="Blade" value="1391" />
+          <entry key="PHP" value="3089" />
           <entry key="PLAIN_TEXT" value="14" />
         </counts>
       </usages-collector>
@@ -91,8 +89,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/IndexController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="121" column="39" selection-start-line="121" selection-start-column="39" selection-end-line="121" selection-end-column="39" />
+            <state relative-caret-position="460">
+              <caret line="98" column="21" selection-start-line="98" selection-start-column="21" selection-end-line="98" selection-end-column="21" />
               <folding>
                 <element signature="e#40#90#0#PHP" expanded="true" />
               </folding>
@@ -103,7 +101,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WeixinController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
+            <state relative-caret-position="475">
               <caret line="150" column="8" lean-forward="true" selection-start-line="150" selection-start-column="8" selection-end-line="152" selection-end-column="11" />
               <folding>
                 <element signature="e#40#68#0#PHP" expanded="true" />
@@ -115,9 +113,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Index/shijuan.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="178" column="121" lean-forward="true" selection-start-line="178" selection-start-column="121" selection-end-line="178" selection-end-column="121" />
+            <state relative-caret-position="155">
+              <caret line="89" column="25" selection-start-line="89" selection-start-column="25" selection-end-line="89" selection-end-column="25" />
               <folding>
+                <element signature="e#2409#2415#0#HTML" expanded="true" />
+                <element signature="e#2441#2447#0#HTML" expanded="true" />
+                <element signature="e#2445#2465#0#HTML" expanded="true" />
                 <element signature="e#2455#2485#0#HTML" expanded="true" />
               </folding>
             </state>
@@ -392,15 +393,15 @@
       <workItem from="1536457892538" duration="28916000" />
       <workItem from="1536498707923" duration="247000" />
       <workItem from="1536499766184" duration="97000" />
-      <workItem from="1536540995577" duration="801000" />
+      <workItem from="1536540995577" duration="1098000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39938000" />
+    <option name="totallyTimeSpent" value="40235000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="101" y="38" width="1729" height="920" extended-state="0" />
+    <frame x="141" y="46" width="1729" height="920" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1527861" />
@@ -590,7 +591,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WeixinController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
+        <state relative-caret-position="475">
           <caret line="150" column="8" lean-forward="true" selection-start-line="150" selection-start-column="8" selection-end-line="152" selection-end-column="11" />
           <folding>
             <element signature="e#40#68#0#PHP" expanded="true" />
@@ -600,9 +601,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Index/shijuan.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="178" column="121" lean-forward="true" selection-start-line="178" selection-start-column="121" selection-end-line="178" selection-end-column="121" />
+        <state relative-caret-position="155">
+          <caret line="89" column="25" selection-start-line="89" selection-start-column="25" selection-end-line="89" selection-end-column="25" />
           <folding>
+            <element signature="e#2409#2415#0#HTML" expanded="true" />
+            <element signature="e#2441#2447#0#HTML" expanded="true" />
+            <element signature="e#2445#2465#0#HTML" expanded="true" />
             <element signature="e#2455#2485#0#HTML" expanded="true" />
           </folding>
         </state>
@@ -610,8 +614,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="121" column="39" selection-start-line="121" selection-start-column="39" selection-end-line="121" selection-end-column="39" />
+        <state relative-caret-position="460">
+          <caret line="98" column="21" selection-start-line="98" selection-start-column="21" selection-end-line="98" selection-end-column="21" />
           <folding>
             <element signature="e#40#90#0#PHP" expanded="true" />
           </folding>

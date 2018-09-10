@@ -96,6 +96,7 @@ class IndexController extends Controller
             ->orderBy(DB::raw('RAND()'))
             ->take("$count")
             ->get();
+        dd($obj);die;
         return view('Index.shijuan',[
            'obj' => $obj,
             'user' => $usrinfo,
