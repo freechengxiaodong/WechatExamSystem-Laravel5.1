@@ -27,6 +27,7 @@
             padding: 8px;
             border-style: solid;
             border-color: #a9c6c9;
+            text-align: center;
         }
         .oddrowcolor{
             background-color:#d4e3e5;
