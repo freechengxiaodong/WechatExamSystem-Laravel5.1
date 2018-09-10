@@ -176,7 +176,7 @@
 
             // show number of correct answers out of total
             //resultsContainer.innerHTML = `你答对了${myQuestions.length}中的${numCorrect}`;
-            window.location.href = "/dafen?dui="+numCorrect+"&count="+myQuestions.length+"&shijuanid="+"{{$shijuanid}}"";
+            window.location.href = "/dafen?dui="+numCorrect+"&count="+myQuestions.length+"&shijuanid="+"{{$shijuanid}}";
         }
 
         function showSlide(n) {
