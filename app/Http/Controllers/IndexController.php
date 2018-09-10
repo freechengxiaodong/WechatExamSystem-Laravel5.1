@@ -162,10 +162,12 @@ class IndexController extends Controller
     public function chooseshijuan(Request $request){
         //$obj = DB::table('tests')->where('id', '>' ,'0')->get();
         $obj = [];
+        if($request->input('flag')){
             if($request->input('flag') == '1'){
                 $shijuanid = DB::table('shijuans')->max('id');
                 $obj = DB::table('counts')->where('shijuan_id','=',$shijuanid)->orderBy('score','DESC')->get();
             }
+        }
         return view('Index.chooseshijuan',[
             'obj' => $obj,
         ]);

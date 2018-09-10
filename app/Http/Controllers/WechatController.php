@@ -122,7 +122,7 @@ class WechatController extends Controller
                             { 
                                 "name":"生成试卷",
                                 "type":"view",
-                                "url":"http://exam.delin0.cn/createshijuan?flag=0"
+                                "url":"http://exam.delin0.cn/createshijuan"
                             }
                         ]
                     }';

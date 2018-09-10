@@ -18,7 +18,10 @@
         <div class="weui-tab__bd">
 
 
-            @if($_GET['flag'] == 0)
+            @if(isset($_GET['flag']))
+                @if($_GET['flag'] == 1)
+                    这是成绩表
+                    @endif
             <form action="{{url('/shijuanInsert')}}" method="post" style="border: 1px solid darkgray;border-radius: 10px;height: 400px;width: 80%;margin-top: 100px">
                 <div class="weui-cells__title" style="font-size: 22px;text-align: center;color: green">试题选择</div>
                 <div class="weui-cells__title">选择章节</div>
@@ -49,8 +52,6 @@
                 <input type="hidden" name="openid" value="">
                 <button class="weui-btn weui-btn_plain-primary" style="width: 80%;margin-top: 40px">生成试卷</button>
             </form>
-                @else
-            这是成绩表
                 @endif
 
         </div>
