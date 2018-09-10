@@ -83,19 +83,11 @@
                             <tr>
                                 <th>排名</th><th>姓名</th><th>分数</th>
                             </tr>
-                            <tr>
-                                <td>1</td><td>qwe</td><td>34</td>
-                            </tr>
-                            <tr>
-                                <td>2</td><td>Text 2B</td><td>67</td>
-                            </tr>
-                            </tr>
-                            <tr>
-                                <td>3</td><td>Text 3B</td><td>Text 3C</td>
-                            </tr>
-                            <tr>
-                                <td>4</td><td>Text 4B</td><td>Text 4C</td>
-                            </tr>
+                            @foreach($obj as $k => $v)
+                                <tr>
+                                    <td>{{$k+1}}</td><td>{{$v->name}}</td><td>{{$v->grade}}</td>
+                                </tr>
+                                @endforeach
                         </table>
 
                         <!--  The table code can be found here: http://www.textfixer/resources/css-tables.php#css-table03 -->
