@@ -166,7 +166,13 @@ class IndexController extends Controller
             if($request->input('flag') == '1'){
                 $shijuanid = DB::table('shijuans')->max('id');
                 $obj = DB::table('counts')->where('shijuan_id','=',$shijuanid)->orderBy('grade','DESC')->get();
+                //遍历数据对象,组合带学生姓名的数据
+                foreach($obj as $k => $v){
+                    $info = DB::table('students')->where('id','=',$v->student_id)->first();
+                    $obj['name'] = $info->name;
+                }
             }
+            dd($obj);die;
         }
         return view('Index.chooseshijuan',[
             'obj' => $obj,
