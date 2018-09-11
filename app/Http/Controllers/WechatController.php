@@ -109,20 +109,10 @@ class WechatController extends Controller
         $url = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=".$access_token;
         $postJson = '{ 
                 "button":[
-                            { 
-                                "type":"click",
-                                "name":"待定",
-                                "key":"item1"
-                           },
                            { 
-                                "name":"随堂测试",
+                                "name":"网络原理测试",
                                 "type":"view",
                                 "url":"http://exam.delin0.cn/loginConfirm"
-                            },
-                            { 
-                                "name":"生成试卷",
-                                "type":"view",
-                                "url":"http://exam.delin0.cn/createshijuan"
                             }
                         ]
                     }';
