@@ -43,13 +43,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="env" value="14" />
-          <entry key="php" value="5971" />
+          <entry key="php" value="6015" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Blade" value="1952" />
-          <entry key="PHP" value="4019" />
+          <entry key="PHP" value="4063" />
           <entry key="PLAIN_TEXT" value="14" />
         </counts>
       </usages-collector>
@@ -89,8 +89,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/IndexController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="114" column="8" selection-start-line="114" selection-start-column="8" selection-end-line="114" selection-end-column="8" />
+            <state relative-caret-position="260">
+              <caret line="115" column="23" lean-forward="true" selection-start-line="115" selection-start-column="23" selection-end-line="115" selection-end-column="23" />
               <folding>
                 <element signature="e#40#90#0#PHP" expanded="true" />
               </folding>
@@ -434,15 +434,15 @@
       <workItem from="1536499766184" duration="97000" />
       <workItem from="1536540995577" duration="11309000" />
       <workItem from="1536581953064" duration="40000" />
-      <workItem from="1536659482486" duration="4141000" />
+      <workItem from="1536659482486" duration="4417000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54627000" />
+    <option name="totallyTimeSpent" value="54903000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="224" y="410" width="1729" height="920" extended-state="0" />
+    <frame x="154" y="204" width="1729" height="920" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15638107" />
@@ -667,8 +667,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="114" column="8" selection-start-line="114" selection-start-column="8" selection-end-line="114" selection-end-column="8" />
+        <state relative-caret-position="260">
+          <caret line="115" column="23" lean-forward="true" selection-start-line="115" selection-start-column="23" selection-end-line="115" selection-end-column="23" />
           <folding>
             <element signature="e#40#90#0#PHP" expanded="true" />
           </folding>

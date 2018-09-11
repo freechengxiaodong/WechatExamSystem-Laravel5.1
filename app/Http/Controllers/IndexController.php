@@ -112,6 +112,7 @@ class IndexController extends Controller
         $startdate=$res->created_at;
         $enddate=date("y-m-d H:i:s");
         $minute=floor((strtotime($enddate)-strtotime($startdate))%86400/60);
+        echo $minute;die;
         if($minute>=1){
             $title = 'error';
             $content = '试卷已超过1分钟,过期!';
