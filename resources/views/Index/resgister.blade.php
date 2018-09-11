@@ -7,8 +7,8 @@
         }
     </style>
     <form action="{{url('/studentInfoInsert')}}" method="post" style="height: 300px;width: 80%;margin-top: 60px">
-        <div class="weui-cells__title" style="font-size: 22px;text-align: center;color: green;margin-top: 100px">学生信息绑定</div>
-        <div class="weui-cell" style="border: 1px solid grey;border-radius: 3px;">
+        <div class="weui-cells__title" style="font-size: 22px;text-align: center;color: green;">学生信息绑定</div>
+        <div class="weui-cell" style="border: 1px solid grey;border-radius: 3px;margin-top: 100px;">
             <div class="weui-cell__hd"><label class="weui-label" style="width: 60px">姓名</label></div>
             <div class="weui-cell__bd">
                 <input class="weui-input" type="text" name="name" placeholder="请输入姓名">
