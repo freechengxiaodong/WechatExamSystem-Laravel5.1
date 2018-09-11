@@ -92,7 +92,7 @@
 <div class="quiz-container">
     <div id="quiz"></div>
 </div>
-<button id="previous">前一题</button>
+<button id="previous">上一题</button>
 <button id="next">下一题</button>
 <button id="submit">交卷</button>
 <div id="results"></div>
