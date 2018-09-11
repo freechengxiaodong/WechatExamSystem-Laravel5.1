@@ -1,5 +1,5 @@
 @extends('layout.father')
-@section('title','学生信息完善')
+@section('title','学生信息绑定')
 @section('content')
     <style>
         *{
