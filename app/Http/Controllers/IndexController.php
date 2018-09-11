@@ -45,7 +45,7 @@ class IndexController extends Controller
     public function studentInfoInsert(Request $request){
         $name = $request->input('name');
         $number = $request->input('number');
-        $res = DB::table('students')->where('name','=',$name)->where->('number','=',$number)->first();
+        $res = DB::table('students')->where('name','=',$name)->where('number','=',$number)->first();
         $id = $res->id;
         if($res){
             $jieguo = DB::table('students')->where('id','=',$id)->update([
