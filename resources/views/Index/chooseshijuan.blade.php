@@ -95,17 +95,6 @@
                             <th>平均分　{{$avgscore}}分</th>
                         </tr>
                     </table>
-
-                        <!--  The table code can be found here: http://www.textfixer/resources/css-tables.php#css-table03 -->
-
-
-
-
-
-
-
-
-
                     @endif
             @else
             <form action="{{url('/shijuanInsert')}}" method="post" style="height: 400px;width: 80%;margin-top: 50px">
