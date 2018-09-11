@@ -87,6 +87,7 @@ class IndexController extends Controller
 
         $startdate=date("y-m-d H:i:s");
         $enddate=$res->created_at;
+        echo $enddate;die;
         $date=floor((strtotime($enddate)-strtotime($startdate))/86400);
         $hour=floor((strtotime($enddate)-strtotime($startdate))%86400/3600);
         $minute=floor((strtotime($enddate)-strtotime($startdate))%86400/60);
