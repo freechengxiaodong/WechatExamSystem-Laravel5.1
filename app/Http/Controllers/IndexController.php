@@ -43,17 +43,32 @@ class IndexController extends Controller
         }
     }
     public function studentInfoInsert(Request $request){
-        $res = DB::table('students')->insert([
-            'openid' => $request->session()->get('openid'),
-            'name' => $request->input('name'),
-            'number' => $request->input('number'),
+        $name = $request->input('name');
+        $number = $request->input('number');
+        $res = DB::table('students')->where('name','=',$name)->where->('number','=',$number)->first();
+        $id = $res->id;
+        if($res){
+            $jieguo = DB::table('students')->where('id','=',$id)->update([
+                'openid' => $request->session()->get('openid'),
             ]);
-        if ($res){
-            echo "<script>location.href='".'/shijuan'."';</script>";
+            if($jieguo){
+                echo "<script>location.href='".'/shijuan'."';</script>";
+            }else{
+                $title = 'error';
+                $content = '提交信息含有非法参数,请重新绑定!';
+                return view('warning.msg',[
+                    'title' => $title,
+                    'content' => $content,
+                ]);
+            }
         }else{
-            echo "<script>alert('非法参数,请新填写信息!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
+            $title = 'error';
+            $content = '未找到学生信息,请填写正确的姓名以及学号信息,或者请联系管理员老师重新录入信息!';
+            return view('warning.msg',[
+                'title' => $title,
+                'content' => $content,
+            ]);
         }
-
     }
     public function shijuan(Request $request){
         //检测教师是否有推出试卷
