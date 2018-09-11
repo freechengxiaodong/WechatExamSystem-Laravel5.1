@@ -97,7 +97,7 @@ class IndexController extends Controller
                 'content' => $content,
             ]);
         }
-        echo $enddate-$startdate;die;
+        echo ceil(($enddate-$startdate)/60);die;
         $startminute = date("H",strtotime($startdate))*60+date("i",strtotime($startdate));
         $endminute = date("H",strtotime($enddate))*60+date("i",strtotime($enddate));
 
