@@ -128,6 +128,7 @@ class IndexController extends Controller
 //        $hour=floor((strtotime($enddate)-strtotime($startdate))%86400/3600);
 //        $minute=floor((strtotime($enddate)-strtotime($startdate))%86400/60);
         //echo $minute;
+        echo $endminute-$startminute;die;
         if($endminute-$startminute>=30){
             $title = 'error';
             $content = '试卷已超过30分钟,过期!';
