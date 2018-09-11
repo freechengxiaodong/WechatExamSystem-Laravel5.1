@@ -33,7 +33,7 @@
     </div>
     <div class="weui-msg__opr-area" style="margin-top: 100px">
         <p class="weui-btn-area">
-            <a onclick="WeixinJSBridge.call('closeWindow');" class="weui-btn weui-btn_plain-primary">关闭本页面</a>
+            <a onclick="WeixinJSBridge.call('closeWindow');" class="weui-btn weui-btn_primary">关闭本页面</a>
         </p>
     </div>
     <script src="/other/js/jquery.min.js"></script>
