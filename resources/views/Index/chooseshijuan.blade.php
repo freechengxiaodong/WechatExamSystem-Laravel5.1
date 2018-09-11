@@ -109,11 +109,10 @@
                     @endif
             @else
             <form action="{{url('/shijuanInsert')}}" method="post" style="height: 400px;width: 80%;margin-top: 50px">
-                <div class="weui-cells__title" style="font-size: 22px;text-align: center;color: green">测试内容</div>
-                <div class="weui-cells__title" style="margin-top: 20px;color: black">选择章节</div>
+                <div class="weui-cells__title" style="font-size: 22px;text-align: center;color: green">试题内容选择</div>
+                <div class="weui-cells__title" style="margin-top: 20px;color: black">章节选择</div>
                 <div class="weui-cell weui-cell_select">
                     <div class="weui-cell__bd" style="border: 1px solid grey;border-radius: 3px;">
-                        <div class="weui-cell__hd"><label class="weui-label" style="width: 60px">姓名</label></div>
                         <select class="weui-select" name="zhangjie" style="color: grey">
                             <option selected value="第一章">第一章</option>
                             <option value="第二章">第二章</option>
@@ -123,7 +122,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="weui-cells__title" style="color: black">选择题数</div>
+                <div class="weui-cells__title" style="color: black;margin-top: 10px">题数选择</div>
                 <div class="weui-cell weui-cell_select" style="border: 1px solid grey;border-radius: 3px;">
                     <div class="weui-cell__bd">
                         <select class="weui-select" name="count" style="color: grey">
