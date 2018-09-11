@@ -90,8 +90,9 @@ class IndexController extends Controller
         $date=floor((strtotime($enddate)-strtotime($startdate))/86400);
         $hour=floor((strtotime($enddate)-strtotime($startdate))%86400/3600);
         $minute=floor((strtotime($enddate)-strtotime($startdate))%86400/60);
-        $cha = $date*24*60+$hour*60+$minute;
-        echo $cha;die;
+        $second=floor((strtotime($enddate)-strtotime($startdate))%86400%60);
+        echo "现在距结束时间还有".$date."天".$hour."小时".$minute."分钟".$second."秒";die;
+        $cha = $data*24*60+$hour*60+$minute;
 
 
 //        $date=floor((strtotime($enddate)-strtotime($startdate))/86400);
