@@ -84,45 +84,15 @@ class IndexController extends Controller
         //检测教师是否有推出试卷
         $id = DB::table('shijuans')->max('id');
         $res = DB::table('shijuans')->find($id);
-//        $shijuantime = $res->created_at;
-//        $currenttime = time();
-//        $hour = floor($shijuantime/3600);
-//        $minute = floor(($shijuantime-3600 * $hour)/60);
-//        $shijuantime1 = $hour*60+$minute;
-//        $hour1 = floor($currenttime/3600);
-//        $minute1 = floor(($currenttime-3600 * $hour)/60);
-//        $currenttime1 = $hour1*60+$minute1;
-//        $cha = $currenttime1-$shijuantime1;
-//        if($cha >= 60 ){
-//            $title = 'error';
-//            $content = '暂无试卷!';
-//            return view('warning.msg',[
-//                'title' => $title,
-//                'content' => $content,
-//            ]);
-//        }
-//        if($request->session()->get('flag'=='0') ){
-//            $title = 'error';
-//            $content = '不可重复考试!';
-//            return view('warning.msg',[
-//                'title' => $title,
-//                'content' => $content,
-//            ]);
-//        }
-        $startdate=$res->created_at;
-        $enddate=date("y-m-d H:i:s");
-        $startyear = date("Y-m-d",strtotime($startdate));
-        $currentyear = date("Y-m-d",strtotime($enddate));
-        if($startyear != $currentyear){
-            $title = 'error';
-            $content = '试卷已过期!';
-            return view('warning.msg',[
-                'title' => $title,
-                'content' => $content,
-            ]);
-        }
-        $startminute = date("H",strtotime($startdate))*60+date("i",strtotime($startdate));
-        $endminute = date("H",strtotime($enddate))*60+date("i",strtotime($enddate));
+
+        $startdate=date("y-m-d H:i:s");
+        $enddate=$res->created_at;
+        $date=floor((strtotime($enddate)-strtotime($startdate))/86400);
+        $hour=floor((strtotime($enddate)-strtotime($startdate))%86400/3600);
+        $minute=floor((strtotime($enddate)-strtotime($startdate))%86400/60);
+        $second=floor((strtotime($enddate)-strtotime($startdate))%86400%60);
+        echo "现在距结束时间还有".$date."天".$hour."小时".$minute."分钟".$second."秒";die;
+
 
 //        $date=floor((strtotime($enddate)-strtotime($startdate))/86400);
 //        $hour=floor((strtotime($enddate)-strtotime($startdate))%86400/3600);
