@@ -85,16 +85,21 @@ class IndexController extends Controller
         $id = DB::table('shijuans')->max('id');
         $res = DB::table('shijuans')->find($id);
 
-        $startdate=date("y-m-d H:i:s");
-        $enddate=$res->created_at;
-        echo $enddate;die;
-        $date=floor((strtotime($enddate)-strtotime($startdate))/86400);
-        $hour=floor((strtotime($enddate)-strtotime($startdate))%86400/3600);
-        $minute=floor((strtotime($enddate)-strtotime($startdate))%86400/60);
-        $second=floor((strtotime($enddate)-strtotime($startdate))%86400%60);
-        echo "现在距结束时间还有".$date."天".$hour."小时".$minute."分钟".$second."秒";die;
-        $cha = $data*24*60+$hour*60+$minute;
-
+        $startdate=$res->created_at;
+        $enddate=date("y-m-d H:i:s");
+        $startyear = date("Y-m-d",strtotime($startdate));
+        $currentyear = date("Y-m-d",strtotime($enddate));
+        if($startyear != $currentyear){
+            $title = 'error';
+            $content = '试卷已过期!';
+            return view('warning.msg',[
+                'title' => $title,
+                'content' => $content,
+            ]);
+        }
+        echo $enddate-$startdate;die;
+        $startminute = date("H",strtotime($startdate))*60+date("i",strtotime($startdate));
+        $endminute = date("H",strtotime($enddate))*60+date("i",strtotime($enddate));
 
 //        $date=floor((strtotime($enddate)-strtotime($startdate))/86400);
 //        $hour=floor((strtotime($enddate)-strtotime($startdate))%86400/3600);
