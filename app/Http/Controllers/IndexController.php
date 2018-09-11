@@ -109,6 +109,18 @@ class IndexController extends Controller
 //                'content' => $content,
 //            ]);
 //        }
+        $startdate=$res->created_at;
+        $enddate=date("y-m-d H:i:s");
+        $minute=floor((strtotime($enddate)-strtotime($startdate))%86400/60);
+        if($minute>=1){
+            $title = 'error';
+            $content = '试卷已超过1分钟,过期!';
+            return view('warning.msg',[
+                'title' => $title,
+                'content' => $content,
+            ]);
+        }
+
         $zhangjie = $res->zhangjie;
         $count = $res->count;
         //有测试的话根据教师本次的选题进行试题生成
