@@ -85,35 +85,35 @@ class IndexController extends Controller
         $id = DB::table('shijuans')->max('id');
         $res = DB::table('shijuans')->find($id);
 
-        $startdate=$res->created_at;
-        $enddate=date("y-m-d H:i:s");
-        $startyear = date("Y-m-d",strtotime($startdate));
-        $currentyear = date("Y-m-d",strtotime($enddate));
-        if($startyear != $currentyear){
-            $title = 'error';
-            $content = '试卷已过期!';
-            return view('warning.msg',[
-                'title' => $title,
-                'content' => $content,
-            ]);
-        }
-        echo round(($enddate-$startdate)/3600/24)*24*60;die;
-        $startminute = date("H",strtotime($startdate))*60+date("i",strtotime($startdate));
-        $endminute = date("H",strtotime($enddate))*60+date("i",strtotime($enddate));
+//        $startdate=$res->created_at;
+//        $enddate=date("y-m-d H:i:s");
+//        $startyear = date("Y-m-d",strtotime($startdate));
+//        $currentyear = date("Y-m-d",strtotime($enddate));
+//        if($startyear != $currentyear){
+//            $title = 'error';
+//            $content = '试卷已过期!';
+//            return view('warning.msg',[
+//                'title' => $title,
+//                'content' => $content,
+//            ]);
+//        }
+//        echo round(($enddate-$startdate)/3600/24)*24*60;die;
+//        $startminute = date("H",strtotime($startdate))*60+date("i",strtotime($startdate));
+//        $endminute = date("H",strtotime($enddate))*60+date("i",strtotime($enddate));
 
 //        $date=floor((strtotime($enddate)-strtotime($startdate))/86400);
 //        $hour=floor((strtotime($enddate)-strtotime($startdate))%86400/3600);
 //        $minute=floor((strtotime($enddate)-strtotime($startdate))%86400/60);
         //echo $minute;
-        echo $endminute-$startminute;die;
-        if($endminute-$startminute>=30){
-            $title = 'error';
-            $content = '试卷已超过30分钟,过期!';
-            return view('warning.msg',[
-                'title' => $title,
-                'content' => $content,
-            ]);
-        }
+//        echo $endminute-$startminute;die;
+//        if($endminute-$startminute>=30){
+//            $title = 'error';
+//            $content = '试卷已超过30分钟,过期!';
+//            return view('warning.msg',[
+//                'title' => $title,
+//                'content' => $content,
+//            ]);
+//        }
 
         $zhangjie = $res->zhangjie;
         $count = $res->count;
