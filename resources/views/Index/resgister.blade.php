@@ -22,7 +22,7 @@
         </div>
         {{csrf_field()}}
         <input type="hidden" name="openid" value="{{$openid}}">
-        <button class="weui-btn weui-btn_primary" style="width: 100%;margin-top: 80px">确认提交</button>
+        <button class="weui-btn weui-btn_primary" style="width: 100%;margin-top: 80px">确认绑定</button>
     </form>
 
     @endsection
