@@ -32,15 +32,15 @@ class IndexController extends Controller
         $usr = new Student();
         $usrinfo = $usr->where('openid','=',"$openid")->first();
         if($usrinfo){
-            //已注册过,判断用户是学生还是老师
+            //上一页$_SERVER["HTTP_REFERER"]
+            echo "<script>location.href='".'/shijuan'."';</script>";
+        }else{
+            //判断是否为老师
             $res = DB::table('teachers')->where('openid','=',"$openid")->first();
             if($res){
                 //进入老师页
                 echo "<script>location.href='".'/createshijuan'."';</script>";
             }
-            //上一页$_SERVER["HTTP_REFERER"]
-            echo "<script>location.href='".'/shijuan'."';</script>";
-        }else{
             //尚未注册,需要先注册信息
             return view('Index.resgister',[
                 'openid' => $openid,
