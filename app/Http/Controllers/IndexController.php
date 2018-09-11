@@ -46,8 +46,8 @@ class IndexController extends Controller
         $name = $request->input('name');
         $number = $request->input('number');
         $res = DB::table('students')->where('name','=',$name)->where('number','=',$number)->first();
-        $id = $res->id;
         if($res){
+            $id = $res->id;
             $jieguo = DB::table('students')->where('id','=',$id)->update([
                 'openid' => $request->session()->get('openid'),
             ]);
