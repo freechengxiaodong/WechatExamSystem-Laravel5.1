@@ -113,6 +113,7 @@
                 <div class="weui-cells__title" style="margin-top: 20px;color: black">选择章节</div>
                 <div class="weui-cell weui-cell_select">
                     <div class="weui-cell__bd" style="border: 1px solid grey;border-radius: 3px;">
+                        <div class="weui-cell__hd"><label class="weui-label" style="width: 60px">姓名</label></div>
                         <select class="weui-select" name="zhangjie" style="color: grey">
                             <option selected value="第一章">第一章</option>
                             <option value="第二章">第二章</option>
