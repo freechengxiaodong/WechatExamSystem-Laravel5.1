@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e50f1b37-efc9-4e7b-ade7-28014cdd286d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Index/resgister.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Index/resgister.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,13 +43,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="env" value="14" />
-          <entry key="php" value="5805" />
+          <entry key="php" value="5843" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Blade" value="1863" />
-          <entry key="PHP" value="3942" />
+          <entry key="Blade" value="1899" />
+          <entry key="PHP" value="3944" />
           <entry key="PLAIN_TEXT" value="14" />
         </counts>
       </usages-collector>
@@ -61,12 +61,12 @@
           <entry key="gitignore" value="3" />
           <entry key="html" value="4" />
           <entry key="js" value="1" />
-          <entry key="php" value="36" />
+          <entry key="php" value="37" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Blade" value="16" />
+          <entry key="Blade" value="17" />
           <entry key="HTML" value="4" />
           <entry key="JavaScript" value="1" />
           <entry key="PHP" value="20" />
@@ -86,13 +86,31 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/IndexController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="47" column="100" lean-forward="true" selection-start-line="47" selection-start-column="100" selection-end-line="47" selection-end-column="100" />
+            <state relative-caret-position="180">
+              <caret line="42" column="9" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
               <folding>
                 <element signature="e#40#90#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/Index/resgister.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="16" column="77" selection-start-line="16" selection-start-column="77" selection-end-line="16" selection-end-column="77" />
+              <folding>
+                <element signature="e#210#307#0#HTML" expanded="true" />
+                <element signature="e#300#372#0#HTML" expanded="true" />
+                <element signature="e#401#432#0#HTML" expanded="true" />
+                <element signature="e#514#533#0#HTML" expanded="true" />
+                <element signature="e#744#791#0#HTML" expanded="true" />
+                <element signature="e#809#828#0#HTML" expanded="true" />
+                <element signature="e#1172#1207#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -149,8 +167,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/warning/msg.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="17" column="112" selection-start-line="17" selection-start-column="112" selection-end-line="17" selection-end-column="112" />
+            <state relative-caret-position="400">
+              <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+              <folding>
+                <element signature="e#608#633#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -184,7 +205,6 @@
         <option value="$PROJECT_DIR$/config/wechat.php" />
         <option value="$PROJECT_DIR$/public/wexin.php" />
         <option value="$PROJECT_DIR$/resources/views/layout/father.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Index/resgister.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/WeixinController.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/WechatController.php" />
@@ -193,6 +213,7 @@
         <option value="$PROJECT_DIR$/resources/views/Index/chengji.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/warning/msg.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" />
+        <option value="$PROJECT_DIR$/resources/views/Index/resgister.blade.php" />
       </list>
     </option>
   </component>
@@ -404,12 +425,12 @@
       <workItem from="1536499766184" duration="97000" />
       <workItem from="1536540995577" duration="11309000" />
       <workItem from="1536581953064" duration="40000" />
-      <workItem from="1536659482486" duration="777000" />
+      <workItem from="1536659482486" duration="1163000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51263000" />
+    <option name="totallyTimeSpent" value="51649000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="174" y="127" width="1729" height="920" extended-state="0" />
@@ -533,13 +554,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Index/resgister.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/index/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-60" />
@@ -590,13 +604,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/warning/msg.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="17" column="112" selection-start-line="17" selection-start-column="112" selection-end-line="17" selection-end-column="112" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layout/father.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -616,10 +623,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="47" column="100" lean-forward="true" selection-start-line="47" selection-start-column="100" selection-end-line="47" selection-end-column="100" />
+        <state relative-caret-position="180">
+          <caret line="42" column="9" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
           <folding>
             <element signature="e#40#90#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/warning/msg.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+          <folding>
+            <element signature="e#608#633#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Index/resgister.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="16" column="77" selection-start-line="16" selection-start-column="77" selection-end-line="16" selection-end-column="77" />
+          <folding>
+            <element signature="e#210#307#0#HTML" expanded="true" />
+            <element signature="e#300#372#0#HTML" expanded="true" />
+            <element signature="e#401#432#0#HTML" expanded="true" />
+            <element signature="e#514#533#0#HTML" expanded="true" />
+            <element signature="e#744#791#0#HTML" expanded="true" />
+            <element signature="e#809#828#0#HTML" expanded="true" />
+            <element signature="e#1172#1207#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
