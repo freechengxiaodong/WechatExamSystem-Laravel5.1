@@ -109,21 +109,21 @@ class IndexController extends Controller
 //                'content' => $content,
 //            ]);
 //        }
-        $startdate=$res->created_at;
-        $enddate=date("y-m-d H:i:s");
-        echo strtotime($enddate);die;
-        $date=floor((strtotime($enddate)-strtotime($startdate))/86400);
-        $hour=floor((strtotime($enddate)-strtotime($startdate))%86400/3600);
-        $minute=floor((strtotime($enddate)-strtotime($startdate))%86400/60);
-        echo $minute;
-        if($minute>=1){
-            $title = 'error';
-            $content = '试卷已超过1分钟,过期!';
-            return view('warning.msg',[
-                'title' => $title,
-                'content' => $content,
-            ]);
-        }
+//        $startdate=$res->created_at;
+//        $enddate=date("y-m-d H:i:s");
+//        echo strtotime($enddate);die;
+//        $date=floor((strtotime($enddate)-strtotime($startdate))/86400);
+//        $hour=floor((strtotime($enddate)-strtotime($startdate))%86400/3600);
+//        $minute=floor((strtotime($enddate)-strtotime($startdate))%86400/60);
+//        echo $minute;
+//        if($minute>=1){
+//            $title = 'error';
+//            $content = '试卷已超过1分钟,过期!';
+//            return view('warning.msg',[
+//                'title' => $title,
+//                'content' => $content,
+//            ]);
+//        }
 
         $zhangjie = $res->zhangjie;
         $count = $res->count;
