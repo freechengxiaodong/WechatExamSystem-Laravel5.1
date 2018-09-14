@@ -9,18 +9,18 @@
 实现了课下教师数据管理,课上教师试题发布,学生微信端在线验证身份以及答题,分数计算等业务逻辑
 
 
-## Official Documentation
+## jQuery WeUI - V1.2.1
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+微信样式基于jQuery WeUI [jqweui website](http://jqweui.com/).
 
-## Contributing
+## Laravel 5.1.11
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+主体框架依赖于Laravel 5.1 [Laravel documentation](https://docs.golaravel.com/docs/5.1/installation/).
 
-## Security Vulnerabilities
+## PHP 5.6 / PHP 7
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+语言环境依赖于php5.6/php7,最低版本php5.4(*php5.4时部分laravel数据库模型写法需要手动更改为其他写法).
 
-### License
+### 项目上线部署
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+基于LAMP基础.
