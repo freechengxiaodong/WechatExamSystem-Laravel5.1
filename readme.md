@@ -6,7 +6,7 @@
 [![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
 [![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
 
-实现了课下教师数据管理,课上教师试题发布,学生微信端在线验证身份以及答题,分数计算等业务逻辑
+实现了数据管理,试题发布,微信端验证身份以及答题,分数计算等业务逻辑
 
 
 ## jQuery WeUI - V1.2.1
